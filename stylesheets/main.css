@@ -9,7 +9,7 @@ body {
 div#mainmenu {
 	width: 15%;
 	background-color: #333;
-	height: 25%;
+	height: auto;
 	position: fixed;
     float: left;
 
@@ -17,13 +17,20 @@ div#mainmenu {
 }
 
 ul#menubar, ul#menubarProj, li {
-    list-style: none;
     color: #ffffff;
     cursor: pointer;
     text-align: left;
 
     padding: 0;
-    list-style-type: none;
+    list-style: none none;
+}
+
+ul#menubar {
+    padding-bottom: 50px;
+}
+
+ul#menubarProj {
+    display: none;
 }
 
 a#menuitem {
