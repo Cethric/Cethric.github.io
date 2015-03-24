@@ -1,2 +1,2 @@
 # Cethric.github.io
-Personal Github website.
+Personal Github website at: http://cethric.github.io
