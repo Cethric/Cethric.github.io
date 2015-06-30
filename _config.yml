@@ -11,4 +11,6 @@ encoding: utf-8
 
 # Build settings
 markdown: kramdown
+highlighter: rouge
+excerpt_separator: "\n\n"
 lsi: true
