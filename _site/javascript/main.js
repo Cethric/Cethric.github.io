@@ -1,5 +1,8 @@
-function project_menu() {
-    var list = document.getElementById("project_list");
+var list = document.getElementById("project_list");
+var posts = document.getElementById('posts');
+
+list.onclick = function(e) {
+    e.stopPropagation();
     if (list.style.display=='none') {
         list.style.display = 'block';
     } else {
@@ -8,10 +11,9 @@ function project_menu() {
 }
 
 function more_menu() {
-    var list = document.getElementById('posts');
-    if (list.style.right=='-50em') {
-        list.style.right = "0";
+    if (posts.style.right=='-50em') {
+        posts.style.right = "0";
     } else {
-        list.style.right = "-50em";
+        posts.style.right = "-50em";
     }
 }
