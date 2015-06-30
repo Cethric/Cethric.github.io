@@ -5,13 +5,5 @@ git add -A
 git commit -m "Automated Update"
 git push origin master --force
 
+./data_update
 
-SRC_BASE="/Users/blakerogan/Dropbox/Apps/Editorial/Cethric.github.io"
-DST_BASE="/Users/blakerogan/Dropbox/Apps/Editorial/HTMLEditor-Pythonista"
-
-for dir in "/javascript" "/css" "/_sass" "/_layouts" "/_includes"
-do
-	SRC=$SRC_BASE$dir
-	DST=$DST_BASE
-	cp -r $SRC $DST
-done
