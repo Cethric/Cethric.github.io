@@ -3,17 +3,10 @@ title: Cethric.github.io
 email: ""
 description: > # this means to ignore newlines until "baseurl:"
   Yet to write a description
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://Cethric.github.io.com" # the base hostname & protocol for your site
 github_username:  Cethric
 timezone: Australia/Sydney
 encoding: utf-8
 
-# Build settings
-markdown: kramdown
-highlighter: rouge
-excerpt_separator: "\n\n"
-lsi: true
 
 # Where things are
 source:      .
@@ -42,8 +35,8 @@ whitelist: []
 gems:      []
 
 # Conversion
-markdown:    kramdown
-highlighter: rouge
+markdown:    redcarpet
+highlighter: pygments
 lsi:         false
 excerpt_separator: "\n\n"
 
@@ -52,6 +45,7 @@ detach:  false
 port:    4000
 host:    127.0.0.1
 baseurl: "" # does not include hostname
+url: "http://Cethric.github.io.com"
 
 # Outputting
 permalink:     date
@@ -66,7 +60,7 @@ rdiscount:
   extensions: []
 
 redcarpet:
-  extensions: []
+  extensions: ["strikethrough"]
 
 kramdown:
   auto_ids:       true
