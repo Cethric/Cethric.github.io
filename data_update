@@ -1,6 +1,6 @@
 SRC_BASE="/Users/blakerogan/Dropbox/Apps/Editorial/Cethric.github.io"
 DST_BASE_1="/Users/blakerogan/Dropbox/Apps/Editorial/HTMLEditor-Pythonista"
-DST_BASE_2="/Users/blakerogan/Dropbox/Apps/Editorial/HTMLEditor-Pythonista"
+DST_BASE_2="/Users/blakerogan/Dropbox/Apps/Editorial/XGE"
 
 for dir in "/javascript" "/css" "/_sass" "/_layouts" "/_includes"
 do
