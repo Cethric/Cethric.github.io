@@ -11,10 +11,9 @@ DST_BASE="/Users/blakerogan/Dropbox/Apps/Editorial/HTMLEditor-Pythonista"
 
 for dir in "/javascript" "/css" "/_sass" "_layouts" "_includes"
 do
-	echo ${SRC_BASE}${dir}
 	SRC=$SRC_BASE$dir
 	echo $SRC
 	DST=$DST_BASE$dir
 	echo $DST
-	cp $SRC $DST
+	cp -r $SRC $DST
 done
