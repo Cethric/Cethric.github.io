@@ -18,17 +18,20 @@
     
     document.onclick = function(event){
         var list_parent = false;
+        var more_parent = false;
         for(var node = event.target; node != document.body; node = node.parentNode)
         {
             if(node.id == 'div1'){
                 list_parent = true;
                 break;
+            } else if (node.id == 'div1') {
+                more_parent = true;
             }
         }
         if(list_parent)
             list_handle();
         else
-            list_handle();
+            list.style.display = 'none';
     }
 
     function list_handle() {
