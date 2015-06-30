@@ -116,6 +116,9 @@ I am also in the last 2 years of High School</p>
         else
             posts.style.right = "-50em";
     }
+    document.onkeydown = function(event) {
+        console.log(event.keyCode)
+    }
 
     function list_handle() {
         if (list.style.display=='none') {

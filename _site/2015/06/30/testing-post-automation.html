@@ -110,6 +110,9 @@
         else
             posts.style.right = "-50em";
     }
+    document.onkeydown = function(event) {
+        console.log(event.keyCode)
+    }
 
     function list_handle() {
         if (list.style.display=='none') {
