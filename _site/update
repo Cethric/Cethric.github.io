@@ -9,11 +9,9 @@ git push origin master --force
 SRC_BASE="/Users/blakerogan/Dropbox/Apps/Editorial/Cethric.github.io"
 DST_BASE="/Users/blakerogan/Dropbox/Apps/Editorial/HTMLEditor-Pythonista"
 
-for dir in "/javascript" "/css" "/_sass" "_layouts" "_includes"
+for dir in "/javascript" "/css" "/_sass" "/_layouts" "/_includes"
 do
 	SRC=$SRC_BASE$dir
-	echo $SRC
 	DST=$DST_BASE$dir
-	echo $DST
 	cp -r $SRC $DST
 done
