@@ -9,7 +9,8 @@ git push origin master --force
 SRC_BASE="/Users/blakerogan/Dropbox/Apps/Editorial/Cethric.github.io"
 DST_BASE="/Users/blakerogan/Dropbox/Apps/Editorial/HTMLEditor-Pythonista"
 
-for dir in "/javascript" "/css" "/_sass" "_layouts" "_includes" do
+for dir in "/javascript" "/css" "/_sass" "_layouts" "_includes"
+do
 	echo ${SRC_BASE}${dir}
 	SRC=$SRC_BASE$dir
 	echo $SRC
