@@ -98,8 +98,23 @@ The jAssimp library has been used for all asset importing.</p>
 <script>
     var list = document.getElementById("project_list");
     var posts = document.getElementById('posts');
+    
+    document.onclick = function(event){
+        var list_parent = false;
+        for(var node = event.target; node != document.body; node = node.parentNode)
+        {
+            if(node.id == 'div1'){
+                list_parent = true;
+                break;
+            }
+        }
+        if(list_parent)
+            list_handle();
+        else
+            list_handle();
+    }
 
-    list.onclick = function() {
+    function list_handle() {
         if (list.style.display=='none') {
             list.style.display = 'block';
         } else {
