@@ -95,13 +95,12 @@ I am also in the last 2 years of High School</p>
 <script>
     var list = document.getElementById("project_list");
     var posts = document.getElementById('posts');
-    
     document.onclick = function(event){
         var list_parent = false;
         var more_parent = false;
         for(var node = event.target; node != document.body; node = node.parentNode)
         {
-            if(node.id == 'div1'){
+            if(node.id == 'projects_item'){
                 list_parent = true;
                 break;
             } else if (node.id == 'div1') {
@@ -112,6 +111,10 @@ I am also in the last 2 years of High School</p>
             list_handle();
         else
             list.style.display = 'none';
+        if(more_parent)
+            more_menu();
+        else
+            posts.style.right = "-50em";
     }
 
     function list_handle() {
