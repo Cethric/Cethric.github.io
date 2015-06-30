@@ -89,13 +89,13 @@ This updade will eventually be implimented across all pages.</p>
     var list = document.getElementById("project_list");
     var posts = document.getElementById('posts');
 
-    list.onclick = function(e) {
+    list.onclick = function() {
         if (list.style.display=='none') {
             list.style.display = 'block';
         } else {
             list.style.display = 'none';
         }
-        e.stopPropagation();
+        this.stopPropagation();
     }
 
     function more_menu() {
