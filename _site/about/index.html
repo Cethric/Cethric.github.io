@@ -97,12 +97,12 @@ I am also in the last 2 years of High School</p>
     var posts = document.getElementById('posts');
 
     list.onclick = function(e) {
-        e.stopPropagation();
         if (list.style.display=='none') {
             list.style.display = 'block';
         } else {
             list.style.display = 'none';
         }
+        e.stopPropagation();
     }
 
     function more_menu() {

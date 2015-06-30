@@ -100,12 +100,12 @@ The jAssimp library has been used for all asset importing.</p>
     var posts = document.getElementById('posts');
 
     list.onclick = function(e) {
-        e.stopPropagation();
         if (list.style.display=='none') {
             list.style.display = 'block';
         } else {
             list.style.display = 'none';
         }
+        e.stopPropagation();
     }
 
     function more_menu() {
