@@ -1,10 +1,11 @@
 SRC_BASE="/Users/blakerogan/Dropbox/Apps/Editorial/Cethric.github.io"
 DST_BASE_1="/Users/blakerogan/Dropbox/Apps/Editorial/HTMLEditor-Pythonista"
+DST_BASE_2="/Users/blakerogan/Dropbox/Apps/Editorial/HTMLEditor-Pythonista"
 
 for dir in "/javascript" "/css" "/_sass" "/_layouts" "/_includes"
 do
         SRC=$SRC_BASE$dir
-	for DST in DST_BASE_1
+	for DST in $DST_BASE_1 $DST_BASE_2
 	do
         	cp -r $SRC $DST
 	done
