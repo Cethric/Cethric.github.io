@@ -3,9 +3,8 @@ title: Cethric.github.io
 email: ""
 description: > # this means to ignore newlines until "baseurl:"
   Yet to write a description
-github_username:  Cethric
-timezone: Australia/Sydney
-encoding: utf-8
+github_username:  "Cethric"
+timezone: "Australia/Sydney"
 
 
 # Where things are
