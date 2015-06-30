@@ -120,7 +120,10 @@ The jAssimp library has been used for all asset importing.</p>
             posts.style.right = "-50em";
     }
     document.onkeydown = function(event) {
-        console.log(event.keyCode)
+        if (event.keyCode == 27) {
+            list.style.display = 'none';
+            posts.style.right = "-50em";
+        }
     }
 
     function list_handle() {
