@@ -1,0 +1,8 @@
+---
+layout: post
+title: Testing
+date: 2016-06-18 16:05
+summary: 
+---
+This is another testing post...
+ABCD EFG
