@@ -1,77 +1,54 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
 # Site settings
-title: Cethric.github.io
-email: ""
+title: Your awesome title
+email: roganBlake@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Yet to write a description
-github_username:  "Cethric"
-git_host: "http://Cethric.github.io"
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://Cethric.github.io" # the base hostname & protocol for your site
+twitter_username: 
+github_username:  Cethric
+linkedin_username: blake-rogan-74920a114
+omz_forum_username: cethric
+facebook_username: blake.rogan.18
+lsi: false
 
-# Where things are
-source:      .
-destination: ./_site
-plugins:     ./_plugins
-layouts:     ./_layouts
-data_source: ./_data
-collections: null
+# reading
+exclude: ['tmp']
 
-# Handling Reading
-safe:         false
-include:      [".htaccess"]
-exclude:      []
-keep_files:   [".git", ".svn"]
-encoding:     "utf-8"
-markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+# Build settings
+markdown: kramdown
 
-# Filtering Content
-show_drafts: null
-limit_posts: 0
-future:      true
-unpublished: false
+
+sass:
+    style: compressed
+    sass_dir: "_sass"
+
+# RSS Generator
+name: Cethric.github.com
+author: Blake Rogan
+copyright: © 2016 Blake Rogan
+rss_path: /
+rss_name: rss.xml
+rss_post_limit: -1
+
+# Deploy
+deploy:
+ - echo 'DEPLOY'
 
 # Plugins
-whitelist: []
-gems:      []
-
-# Conversion
-markdown:    redcarpet
-highlighter: pygments
-lsi:         false
-excerpt_separator: "\n\n"
-
-# Serving
-detach:  false
-port:    4000
-host:    127.0.0.1
-baseurl: "" # does not include hostname
-url: "http://Cethric.github.io/"
-
-# Outputting
-permalink:     date
-paginate_path: /page:num
-timezone: "Australia/Sydney"
-
-quiet:    false
-defaults: []
-
-# Markdown Processors
-rdiscount:
-  extensions: []
-
-redcarpet:
-  extensions: ["strikethrough", "tables", "fenced_code_blocks", "autolink", "superscript", "lax_spacing"]
-
-kramdown:
-  auto_ids:       true
-  footnote_nr:    1
-  entity_output:  as_char
-  toc_levels:     1..6
-  smart_quotes:   lsquo,rsquo,ldquo,rdquo
-  enable_coderay: false
-
-  coderay:
-    coderay_wrap:              div
-    coderay_line_numbers:      inline
-    coderay_line_number_start: 1
-    coderay_tab_width:         4
-    coderay_bold_every:        10
-    coderay_css:               style
+gems:
+ - jekyll-coffeescript
+ - jekyll-watch
+ - jekyll-assets
+ - jekyll-deploy
+ - jekyll_figure
+ - jekyll-email-protect

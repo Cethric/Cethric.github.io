@@ -1,18 +1,26 @@
 ---
-layout: page
 title: Projects
-permalink: /projects/
+layout: default
+permalink: /projects
 ---
-
-###XGE - Experimental Game Engine
-
-This engine has been created in java with LWJGL v3 as its backend
-The jAssimp library has been used for all asset importing.
-
-###Cethric.github.io
-
-While this is not really a project in its self, it is a good way for me to learn how to develop a modern Website
-
-###HTML Editor Pythonista
-
-A simple HTML Editor written in python for the pythonista app. This project while not inactive while probably not get the most attention at the moment while I am still at school
+<div class='row'>
+<h1> Projects </h1>
+</div>
+<div class='row'>
+<div class='col-19'>
+    <table class='project_list w8'>
+    {% tablerow project in site.data.projects % cols:6 %}
+        {% assign image = "url(images/imageDefault-01.svg)" %}
+        {% if project.image != 'none' %}
+            {% assign image = {{project.image | append:")" | prepend:"url("}} %}
+        {% endif %}
+        <div style='background-image:{{image}}' class='project_item' onclick="">
+            <div class='project_excerpt'>
+                <a href="{{ project.url }}" >{{ project.summary | remove: '<p>' | remove: '</p>' }}</a>
+            </div>
+            <span class='project_link'>{{ project.title }}</span>
+        </div>
+    {% endtablerow %}
+    </table>
+</div>
+</div>

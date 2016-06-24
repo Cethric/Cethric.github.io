@@ -1,52 +1,58 @@
 ---
-# Only the main Sass file needs front matter (the dashes are enough)
 ---
-@charset "utf-8";
 
-
-
-// Our variables
-$base-font-family: Helvetica, Arial, sans-serif;
-$base-font-size:   16px;
-$small-font-size:  $base-font-size * 0.875;
-$base-line-height: 1.5;
-
-$spacing-unit:     30px;
-
-$text-color:       #111;
-$background-color: #fdfdfd;
-$brand-color:      #2a7ae2;
-
-$grey-color:       #828282;
-$grey-color-light: lighten($grey-color, 40%);
-$grey-color-dark:  darken($grey-color, 25%);
-
-// Width of the content area
-$content-width:    800px;
-
-$on-palm:          600px;
-$on-laptop:        800px;
-
-
-
-// Using media queries with like this:
-// @include media-query($on-palm) {
-//     .wrapper {
-//         padding-right: $spacing-unit / 2;
-//         padding-left: $spacing-unit / 2;
-//     }
-// }
-@mixin media-query($device) {
-    @media screen and (max-width: $device) {
-        @content;
-    }
+@mixin text-style($color, $alignment) {
+    color: $color;
+    text-align: $alignment;
+    font-family: "Arial", Arial, sans-serif;
 }
 
+$default-background: #313C49;
+$default-menu-background: #111C3C;
+$default-menu-background-alt: #5D6980;
+$default-menu-background-alt2: #191F3F;
+$default-text-color: #E4DDEE;
+$default-link-color: #C6D3EE;
+$default-link-color-hover: #FFFFFF;
 
+@import "layout.scss";
 
-// Import partials from `sass_dir` (defaults to `_sass`)
-@import
-        "base",
-        "layout",
-        "syntax-highlighting"
-;
+a {
+    color: $default-link-color;
+}
+
+a:hover {
+    color: $default-link-color-hover;
+}
+
+div.header {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: $default-menu-background;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100000000;
+}
+
+div.body {
+    padding-left: 1em;
+    margin-left: 1em;
+    margin-top: 3.5em;
+    margin-bottom: 3.5em;
+}
+
+div.footer {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: $default-menu-background;
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+}
+@import "menus.scss";
+@import "projects.scss";
+@import "posts.scss";
+@import "_syntax-highlighting.scss";

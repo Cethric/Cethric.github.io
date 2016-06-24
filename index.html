@@ -1,0 +1,71 @@
+---
+layout: default
+title: Home
+---
+<div class='col-5'>
+    <h1> Cethric.github.io </h1>
+    <h2> Who am I </h2>
+    <p>
+        Hi, <br/>
+        My name is Blake, I am a year 12 HSC student from Sydney Australia <br/>
+        I currently am studying <br/>
+        <ul>
+            <li> English. </li>
+            <li> Mathematics. </li>
+            <li> Modern History. </li>
+            <li> Physics. </li>
+            <li> Chemistry. </li>
+            <li> Information Digital Technology at TAFE. </li>
+        </ul>
+        And I am a hobbyist programmer in a multitude of programming languages. <br/>
+        Including but not limited to (and in no particular order): <br/>
+        <ul>
+            <li> Python (Probably my strongest). </li>
+            <li> Swift. </li>
+            <li> Lua. </li>
+            <li> Javascript. </li>
+            <li> C, C++, Objective C. </li>
+            <li> Java. </li>
+            <li> HTML and CSS. </li>
+        </ul>
+    </p>
+</div>
+
+<div class='col-4'>
+    {% for post in site.posts limit:10 %}
+     <div class='post'>
+        <p> <a href="{{ post.url }}">{{ post.title }}</a> <br/> <span style='font-size:12px;'> {{ post.date }} </span> </p>
+        {{ post.excerpt | truncatewords: 40 }}
+     </div>
+     {% endfor %}
+    </ul>
+</div>
+
+<div class='col-8'>
+    <div class='project_scroller_container'>
+        <div class='project_scroller'>
+            {% for project in site.data.projects %}
+            {% if project.splash != nil %}
+            <div class='project_image_scroller' style='background-image:{{project.splash | append:")" | prepend:"url("}}'>
+                <p> {{ project.title }} </p>
+            </div>
+            {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+    <p> &nbsp; </p>
+    <table class='project_list'>
+    {% tablerow project in site.data.projects % cols:4 limit:20 %}
+        {% assign image = "url(images/imageDefault-01.svg)" %}
+        {% if project.image != 'none' %}
+            {% assign image = {{project.image | append:")" | prepend:"url("}} %}
+        {% endif %}
+        <div style='background-image:{{image}}' class='project_item' onclick="">
+            <div class='project_excerpt'>
+                <a href="{{ project.url }}" >{{ project.summary | remove: '<p>' | remove: '</p>' }}</a>
+            </div>
+            <span class='project_link'>{{ project.title }}</span>
+        </div>
+    {% endtablerow %}
+    </table>
+</div>
