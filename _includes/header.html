@@ -2,7 +2,7 @@
     <ul class='header_menu_horizontal'>
         {% for my_page in site.pages %}
             {% if my_page.title %}
-                <script> {{my_page}} </script>
+                <!-- <script> {{my_page}} </script> -->
                 {% if my_page.is_archive != true %}
                 {% if page.title == my_page.title %}
                 {% assign active = "active" %}

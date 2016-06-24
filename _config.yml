@@ -43,6 +43,9 @@ rss_post_limit: -1
 # Deploy
 deploy:
  - echo 'DEPLOY'
+ - git add -i .
+ - git commit
+ - git push
 
 # Plugins
 gems:
