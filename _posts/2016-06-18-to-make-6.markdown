@@ -1,9 +1,0 @@
----
-layout: post
-title: To Make 6
-date: 2016-06-18 18:26
-summary: 
-categories: ['test']
----
-Hello world
-This should hopefully be the 6th post
