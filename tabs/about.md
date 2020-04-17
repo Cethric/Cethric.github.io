@@ -9,4 +9,9 @@ title: About
 ---
 
 Hello there :wave:
+
 I am Blake Rogan a Graduate software developer at Telstra Purple
+
+I have a passion to develop simple solutions to complex problems through the use of technology and as a software 
+developer I am continually learning and improving my knowledge to gain a better understand allowing me to develop 
+better solutions.
