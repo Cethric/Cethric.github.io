@@ -7,25 +7,25 @@ tags: [graphql, web-api, tutorial]
 toc: true
 ---
 
-# Introduction
+In this blog post I will cover some basic techniques to create a GraphQL server using the Apollo Server Library
+and the Hasura GraphQL engine. I will then go on to provide an example of to connect a client application to the
+GraphQL server.
+
+# GraphQL Server
+
+##  Apollo GraphQL Server
+
+## Hasura GraphQL Engine
 
 
-## Part 1.1
+# GraphQL Client
 
+## Apollo GraphQL Client
 
-## Part 1.2
+## VueJS Web Application
 
-
-# Section 2
-
-
-## Part 2.1
-
-
-### Part 1.1.1
-
-
-### Part 1.1.2
 
 # Links
 [GraphQL](https://graphql.org/)
+
+[Example Project](https://github.com/Cethric/GraphQLIntro)
