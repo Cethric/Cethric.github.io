@@ -39,7 +39,7 @@ social:
     - https://www.linkedin.com/in/Blake-Rogan
     - https://github.com/Cethric
 
-google_site_verification: google_meta_tag_verification # change to your verification string
+google_site_verification: qBUuJ4hXK6UG9lutKJhYufwvO3q-Mt4ZyVWCovhfrOU
 
 #--------------------------
 
@@ -51,7 +51,7 @@ timezone: Australia/Sydney
 
 google_analytics:
   # Fill with your Google Analytics ID
-  id: ''
+  id: 'UA-61374045-1'
   # The Google Analytics pageviews switch.
 
   pv:
