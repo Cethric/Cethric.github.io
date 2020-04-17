@@ -27,3 +27,5 @@ toc: true
 
 ### Part 1.1.2
 
+# Links
+[GraphQL](https://graphql.org/)
