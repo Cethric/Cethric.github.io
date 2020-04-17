@@ -8,7 +8,7 @@ title: About
 # MIT License
 ---
 
-Hello there :wave:
+Hello there 👋
 
 I am Blake Rogan a Graduate software developer at Telstra Purple
 
