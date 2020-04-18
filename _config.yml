@@ -173,6 +173,7 @@ exclude:
   - tools
   - docs
   - README.md
+  - run.sh
 
 sitemap_exclude:  # Sitemap will exclude the following items.
   fuzzy:
