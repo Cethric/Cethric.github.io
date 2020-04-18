@@ -72,7 +72,7 @@ commit() {
 
   if [[ $CATEGORIES = true || $TAGS = true || $LASTMOD = true ]]; then
     msg+=" for post(s)."
-    git commit -m "[Automation] $msg"
+    DONT_CHECK_POST_TAGS=1 git commit -m "[Automation] $msg"
   else
     msg="Nothing changed."
   fi
