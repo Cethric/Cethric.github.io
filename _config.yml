@@ -194,62 +194,62 @@ plugins:
   - jekyll-admin
 
 prose:
-	rooturl: ''
-    siteurl: 'https://cethric.github.io'
-    media: 'media'
-    ignore:
-    	- .idea
-        - _data
-        - _includes
-        - _layouts
-        - _scripts
-        - assets
-        - tools
-        - Gemfile
-        - Gemfile.lock
-        - LICENSE
-        - README.md
-        - run.sh
-    metadata:
-    	_posts:
-          - name: "title"
-            field:
-              element: "text"
-              label: "Title"
-              value: ""
-          - name: "time"
-            field:
-              element: "text"
-              label: "Time"
-              value: ""
-          - name: "author"
-            field:
-              element: "text"
-              label: "Author"
-              value: ""
-          - name: "toc"
-            field:
-              element: "checkbox"
-              label: "Show Table of Contents"
-              value: true
-    	_drafts:
-          - name: "title"
-            field:
-              element: "text"
-              label: "Title"
-              value: ""
-          - name: "time"
-            field:
-              element: "text"
-              label: "Time"
-              value: ""
-          - name: "author"
-            field:
-              element: "text"
-              label: "Author"
-              value: ""
-          - name: "toc"
-            field:
-              element: "checkbox"
-              label: "Show Table of Contents"
-              value: true
+  rooturl: ''
+  siteurl: 'https://cethric.github.io'
+  media: 'media'
+  ignore:
+    - .idea
+    - _data
+    - _includes
+    - _layouts
+    - _scripts
+    - assets
+    - tools
+    - Gemfile
+    - Gemfile.lock
+    - LICENSE
+    - README.md
+    - run.sh
+  metadata:
+    _posts:
+      - name: "title"
+        field:
+          element: "text"
+          label: "Title"
+          value: ""
+      - name: "time"
+        field:
+          element: "text"
+          label: "Time"
+          value: ""
+      - name: "author"
+        field:
+          element: "text"
+          label: "Author"
+          value: ""
+      - name: "toc"
+        field:
+          element: "checkbox"
+          label: "Show Table of Contents"
+          value: true
+    _drafts:
+      - name: "title"
+        field:
+          element: "text"
+          label: "Title"
+          value: ""
+      - name: "time"
+        field:
+          element: "text"
+          label: "Time"
+          value: ""
+      - name: "author"
+        field:
+          element: "text"
+          label: "Author"
+          value: ""
+      - name: "toc"
+        field:
+          element: "checkbox"
+          label: "Show Table of Contents"
+          value: true
