@@ -210,3 +210,16 @@ prose:
         - LICENSE
         - README.md
         - run.sh
+    metadata:
+    	_posts:
+          - name: "title"
+            field:
+              element: "text"
+              label: "Title"
+              value: ""
+    	_drafts:
+          - name: "title"
+            field:
+              element: "text"
+              label: "Title"
+              value: ""
