@@ -227,6 +227,11 @@ prose:
               element: "text"
               label: "Author"
               value: ""
+          - name: "toc"
+            field:
+              element: "checkbox"
+              label: "Show Table of Contents"
+              value: true
     	_drafts:
           - name: "title"
             field:
@@ -243,3 +248,8 @@ prose:
               element: "text"
               label: "Author"
               value: ""
+          - name: "toc"
+            field:
+              element: "checkbox"
+              label: "Show Table of Contents"
+              value: true
