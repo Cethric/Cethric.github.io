@@ -217,9 +217,29 @@ prose:
               element: "text"
               label: "Title"
               value: ""
+          - name: "time"
+            field:
+              element: "text"
+              label: "Time"
+              value: ""
+          - name: "author"
+            field:
+              element: "text"
+              label: "Author"
+              value: ""
     	_drafts:
           - name: "title"
             field:
               element: "text"
               label: "Title"
+              value: ""
+          - name: "time"
+            field:
+              element: "text"
+              label: "Time"
+              value: ""
+          - name: "author"
+            field:
+              element: "text"
+              label: "Author"
               value: ""
