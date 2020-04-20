@@ -221,12 +221,12 @@ prose:
         field:
           element: "text"
           label: "Time"
-          value: ""
+          value: CURRENT_DATETIME
       - name: "author"
         field:
           element: "text"
           label: "Author"
-          value: ""
+          value: CURRENT_USER
       - name: "toc"
         field:
           element: "checkbox"
@@ -257,12 +257,12 @@ prose:
         field:
           element: "text"
           label: "Time"
-          value: ""
+          value: CURRENT_DATETIME
       - name: "author"
         field:
           element: "text"
           label: "Author"
-          value: ""
+          value: CURRENT_USER
       - name: "toc"
         field:
           element: "checkbox"
@@ -283,3 +283,6 @@ prose:
           label: "Tags"
           placeholder: "Tags"
           alterable: true
+  users:
+    - login: "Cethric"
+      user: "Blake Rogan"
