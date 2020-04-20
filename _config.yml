@@ -247,6 +247,10 @@ prose:
           label: "Tags"
           placeholder: "Tags"
           alterable: true
+      - name: "layout"
+        field:
+          element: "hidden"
+          value: "post"
     _drafts:
       - name: "title"
         field:
@@ -283,6 +287,10 @@ prose:
           label: "Tags"
           placeholder: "Tags"
           alterable: true
+      - name: "layout"
+        field:
+          element: "hidden"
+          value: "post"
   users:
     - login: "Cethric"
       user: "Blake Rogan"
