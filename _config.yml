@@ -232,6 +232,21 @@ prose:
           element: "checkbox"
           label: "Show Table of Contents"
           value: true
+      - name: "published"
+        field:
+          element: "checkbox"
+          label: "Published"
+          value: true
+      - name: "excerpt_separator"
+        field:
+          element: "hidden"
+          value: "<!-- content -->"
+      - name: "tags"
+        field:
+          element: "multiselect"
+          label: "Tags"
+          placeholder: "Tags"
+          alterable: true
     _drafts:
       - name: "title"
         field:
@@ -253,3 +268,18 @@ prose:
           element: "checkbox"
           label: "Show Table of Contents"
           value: true
+      - name: "published"
+        field:
+          element: "checkbox"
+          label: "Published"
+          value: false
+      - name: "excerpt_separator"
+        field:
+          element: "hidden"
+          value: "<!-- content -->"
+      - name: "tags"
+        field:
+          element: "multiselect"
+          label: "Tags"
+          placeholder: "Tags"
+          alterable: true
