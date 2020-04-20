@@ -192,3 +192,9 @@ sitemap_exclude:  # Sitemap will exclude the following items.
 
 plugins:
   - jekyll-admin
+
+prose:
+	rooturl: ''
+    siteurl: 'https://cethric.github.io'
+    media: 'media'
+    
