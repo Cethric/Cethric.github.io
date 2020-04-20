@@ -197,4 +197,16 @@ prose:
 	rooturl: ''
     siteurl: 'https://cethric.github.io'
     media: 'media'
-    
+    ignore:
+    	- .idea
+        - _data
+        - _includes
+        - _layouts
+        - _scripts
+        - assets
+        - tools
+        - Gemfile
+        - Gemfile.lock
+        - LICENSE
+        - README.md
+        - run.sh
