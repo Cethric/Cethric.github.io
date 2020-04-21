@@ -33,8 +33,13 @@ An example for how this all links together can be [found here](https://github.co
 
 
 ### The Schema
-The schema can be defined using the following format:
+In GraphQL a schema defines fields that can be queried, mutated or subscribed to and what the type of those fields are. GraphQL provides a Domain Specific Language (DSL) known as the GraphQL Schema Definition Language (SDL) which is used to create these schemas.
 
+#### What makes a schema
+When defining a GraphQL schema there are a few key parts that must be present. These include the `Root` type (some GraphQL server libraries may automatically define this) which is used to group the `Query`, `Mutation` and `Subscription` containers together. A `Query` type should be defined if there are any queries that can be made in the api, A `Mutation` type should be defined if there are any mutations that can be made and a `Subscription` type should be defined if a user is able to subscribe to server events (This feature uses websockets so that the server can notify the client of an event)
+
+#### Example
+An example schema is defined bellow for a simple book database where a user can query for all books or for a specific book by title. They are also able to insert a new book into the database:
 ```graphql
 type Book {
 	title: String
