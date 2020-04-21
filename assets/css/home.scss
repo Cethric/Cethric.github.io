@@ -1,17 +1,16 @@
 ---
 ---
-/*!
-  Style for Homepage
-  v2.0
-  https://github.com/cotes2020/jekyll-theme-chirpy
-  © 2019 Cotes Chung
-  MIT License
-*/
-
-
+  /*!
+    Style for Homepage
+    v2.0
+    https://github.com/cotes2020/jekyll-theme-chirpy
+    © 2019 Cotes Chung
+    MIT License
+  */
 #post-list {
   margin-top: 1rem;
   padding-right: .5rem;
+
   .post-meta {
     i:not(:first-child) { // post-meta icons on HOME
       margin-left: 1.5rem;
@@ -21,6 +20,7 @@
 
 .pagination {
   font-size: 1rem;
+
   a:hover {
     text-decoration: none;
   }
@@ -30,18 +30,22 @@
   padding-top: 1.5rem;
   padding-bottom: 1rem;
   border-bottom: 1px solid var(--main-border-color);
-  >h1 {
+
+  > h1 {
     font-size: 1.4rem;
     margin: 0;
   }
+
   i.far { /* fontawesome icons */
     font-size: 86%;
   }
+
   .post-content {
     margin-top: .6rem;
     margin-bottom: .6rem;
     color: var(--post-list-text-color);
-    >p { /* Make preview shorter in Home page*/
+
+    > p { /* Make preview shorter in Home page*/
       margin: 0;
       overflow: hidden;
       text-overflow: ellipsis;
@@ -70,6 +74,7 @@
     font-family: 'Didact Gothic', sans-serif;
     background-color: var(--button-bg);
   }
+
   &.active {
     .page-link {
       background-color: var(--btn-active-bg);
@@ -78,27 +83,33 @@
       color: var(--btn-text-color);
     }
   }
+
   &.disabled {
     cursor: not-allowed;
+
     .page-link {
       color: rgba(108, 117, 125, 0.57);
       border-color: var(--btn-paginator-border-color);
       background-color: var(--button-bg);
     }
   }
+
   &:first-child .page-link,
   &:last-child .page-link {
     border-radius: 50%;
   }
+
   &:not(:last-child) {
     margin-right: 0.6rem;
   }
 
-} // .page-item
+}
+
+// .page-item
 
 
 @media all and (max-width: 576px) {
-  #post-list .post-meta>span i:not(:first-child) {
+  #post-list .post-meta > span i:not(:first-child) {
     margin-left: 1rem;
   }
 }

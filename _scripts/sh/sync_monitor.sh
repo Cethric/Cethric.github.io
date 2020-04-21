@@ -1,4 +1,4 @@
-#!/bin/bash
+#! /bin/bash
 
 # Files sync monitoer
 # v2.0
@@ -15,24 +15,23 @@ if [[ ! -f $1 ]]; then
   exit 0
 fi
 
-src_dir=`dirname $(realpath $1)`
+src_dir=$(dirname "$(realpath "$1")")
 
-dir_prefix="$(realpath $2)/"
+dir_prefix="$(realpath "$2")/"
 
 related_dir="${src_dir:${#dir_prefix}}"
 
-
-dest="$(realpath $3)/${related_dir}"
+dest="$(realpath "$3")/${related_dir}"
 
 if [[ ! -d "$dest" ]]; then
   mkdir -p "$dest"
 fi
 
 if [[ -f "$1" ]]; then
-  cp $1 $dest
+  cp "$1" "$dest"
 fi
 
 if [[ $related_dir == "_posts" ]]; then
-  bash $3/_scripts/sh/create_pages.sh
-  bash $3/_scripts/sh/dump_lastmod.sh
+  bash "$3"/_scripts/sh/create_pages.sh
+  bash "$3"/_scripts/sh/dump_lastmod.sh
 fi

@@ -12,14 +12,12 @@
 # © 2019 Cotes Chung
 # MIT Licensed
 
-
 set -eu
 
-WORK_DIR=$(dirname $(dirname $(realpath "$0")))
+WORK_DIR=$(dirname "$(dirname "$(realpath "$0")")")
 URL_FILE=${WORK_DIR}/assets/data/proxy.json
 PV_CACHE=${WORK_DIR}/assets/data/pageviews.json
 
+PROXY_URL=$(jq -r '.proxyUrl' "$URL_FILE")
 
-PROXY_URL=$(jq -r '.proxyUrl' $URL_FILE)
-
-wget $PROXY_URL -O $PV_CACHE
+wget "$PROXY_URL" -O "$PV_CACHE"

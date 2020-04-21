@@ -1,13 +1,12 @@
 ---
 ---
-/*!
-  Style for Archives
-  v2.0
-  https://github.com/cotes2020/jekyll-theme-chirpy
-  © 2019 Cotes Chung
-  MIT License
-*/
-
+  /*!
+    Style for Archives
+    v2.0
+    https://github.com/cotes2020/jekyll-theme-chirpy
+    © 2019 Cotes Chung
+    MIT License
+  */
 %date-timeline {
   content: "";
   width: 4px;
@@ -24,15 +23,18 @@
 
 #archives {
   letter-spacing: 0.03rem;
+
   li {
     font-size: 1.1rem;
     line-height: 3rem;
+
     &:nth-child(odd) {
       background-color: var(--main-wrapper-bg, #fff);
       background-image: linear-gradient(
-        to left, #fff, #fbfbfb, #fbfbfb, #fbfbfb, #fff);
+                      to left, #fff, #fbfbfb, #fbfbfb, #fbfbfb, #fff);
     }
-    >div {
+
+    > div {
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
@@ -48,6 +50,7 @@
     &:not(:first-child) {
       position: relative;
       left: 4px;
+
       &::after {
         left: 67px;
       }
@@ -71,16 +74,20 @@
       box-shadow: 0 0 2px 0 #c2c6cc;
       z-index: 1;
     }
-  } // #archives span.lead
+  }
+
+  // #archives span.lead
 
   .date {
     white-space: nowrap;
     display: inline-block;
+
     &.month {
       width: 1.4rem;
       text-align: center;
       @extend %date-font;
-      ~a::before {
+
+      ~ a::before {
         /* A dot for Month and Day */
         content: "";
         display: inline-block;
@@ -98,6 +105,7 @@
         z-index: 1;
       }
     }
+
     &.day {
       font-size: 85%;
       font-family: 'Didact Gothic', sans-serif;
@@ -107,41 +115,52 @@
       position: relative;
       left: -.15rem;
     }
-  } // #archives .date
+  }
+
+  // #archives .date
 
   ul {
-    >li {
-      >div>a {
+    > li {
+      > div > a {
         /* post title in Archvies */
         margin-left: 2.5rem;
         position: relative;
         top: .1rem;
       }
+
       &::after {
         @extend %date-timeline;
         height: 2.8rem;
         top: -1.3rem;
       }
+
       &:first-child::before {
         @extend %date-timeline;
         height: 3.06rem;
         top: -1.61rem;
       }
     }
-    &:not(:last-child)>li:last-child::after {
+
+    &:not(:last-child) > li:last-child::after {
       height: 3.4rem;
     }
-    &:last-child>li:last-child::after {
+
+    &:last-child > li:last-child::after {
       display: none;
     }
-  } // #archives ul
+  }
 
-} // #archives
+  // #archives ul
+
+}
+
+// #archives
 
 
 @media all and (max-width: 576px) {
   #archives {
     margin-top: -1rem;
+
     ul {
       letter-spacing: 0;
     }

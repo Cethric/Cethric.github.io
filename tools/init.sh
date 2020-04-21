@@ -12,24 +12,22 @@ CATEGORIES=false
 TAGS=false
 LASTMOD=false
 
-WORK_DIR=$(dirname $(dirname $(realpath "$0")))
+WORK_DIR=$(dirname "$(dirname "$(realpath "$0")")")
 
 check_status() {
   local _watching_dirs=(
     "_post"
     "_data")
 
-  for i in "${!_watching_dirs[@]}"
-  do
+  for i in "${!_watching_dirs[@]}"; do
     local _dir=${_watching_dirs[${i}]}
-    if [[ ! -z $(git status $_dir -s) ]]; then
+    if [[ -n $(git status "$_dir" -s) ]]; then
       echo "Warning: Commit the changes of the directory '$_dir' first."
-      git status -s | grep $_dir
+      git status -s | grep "$_dir"
       exit 1
     fi
   done
 }
-
 
 update_files() {
   bash _scripts/sh/create_pages.sh
@@ -38,19 +36,18 @@ update_files() {
   find . | grep -E "(__pycache__|\.pyc|\.pyo$)" | xargs rm -rf
 }
 
-
 commit() {
   msg="Updated"
 
-  if [[ ! -z $(git status categories -s) ]]; then
+  if [[ -n $(git status categories -s) ]]; then
     git add categories/
     msg+=" the Categories"
     CATEGORIES=true
   fi
 
-  if [[ ! -z $(git status tags -s) ]]; then
+  if [[ -n $(git status tags -s) ]]; then
     git add tags/
-    if [[ $CATEGORIES = true ]]; then
+    if [[ $CATEGORIES == true ]]; then
       msg+=","
     else
       msg+=" the"
@@ -59,9 +56,9 @@ commit() {
     TAGS=true
   fi
 
-  if [[ ! -z $(git status _data -s) ]]; then
+  if [[ -n $(git status _data -s) ]]; then
     git add _data
-    if [[ $CATEGORIES = true || $TAGS = true ]]; then
+    if [[ $CATEGORIES == true || $TAGS == true ]]; then
       msg+=","
     else
       msg+=" the"
@@ -70,20 +67,19 @@ commit() {
     LASTMOD=true
   fi
 
-  if [[ $CATEGORIES = true || $TAGS = true || $LASTMOD = true ]]; then
+  if [[ $CATEGORIES == true || $TAGS == true || $LASTMOD == true ]]; then
     msg+=" for post(s)."
     DONT_CHECK_POST_TAGS=1 git commit -m "[Automation] $msg"
   else
     msg="Nothing changed."
   fi
 
-  echo $msg
+  echo "$msg"
 }
-
 
 main() {
 
-  cd $WORK_DIR
+  cd "$WORK_DIR"
 
   check_status
 

@@ -10,12 +10,11 @@ set -eu
 
 CMD="JEKYLL_ENV=production bundle exec jekyll b"
 
-WORK_DIR=$(dirname $(dirname $(realpath "$0")))
+WORK_DIR=$(dirname "$(dirname "$(realpath "$0")")")
 
 CONTAINER=${WORK_DIR}/.container
 
 DEST=${WORK_DIR}/_site
-
 
 _help() {
   echo "Usage:"
@@ -28,27 +27,26 @@ _help() {
   echo "   -d, --destination <DIR>  Destination directory (defaults to ./_site)"
 }
 
-
 _init() {
-  cd $WORK_DIR
+  cd "$WORK_DIR"
 
-  if [[ -d $CONTAINER ]]; then
-    rm -rf $CONTAINER
+  if [[ -d "$CONTAINER" ]]; then
+    rm -rf "$CONTAINER"
   fi
 
   if [[ -d _site ]]; then
     jekyll clean
   fi
 
-  local _temp=$(mktemp -d)
-  cp -r * $_temp
-  cp -r .git $_temp
-  mv $_temp $CONTAINER
+  local _temp
+  _temp=$(mktemp -d)
+  cp -r "*" "$_temp"
+  cp -r .git "$_temp"
+  mv "$_temp" "$CONTAINER"
 }
 
-
 _build() {
-  cd $CONTAINER
+  cd "$CONTAINER"
   echo "$ cd $(pwd)"
 
   bash _scripts/sh/create_pages.sh
@@ -56,61 +54,56 @@ _build() {
 
   CMD+=" -d ${DEST}"
   echo "\$ $CMD"
-  eval $CMD
+  eval "$CMD"
   echo -e "\nBuild success, the site files have been placed in '${DEST}'."
 
   if [[ -d ${DEST}/.git ]]; then
-    if [[ ! -z $(git -C $DEST status -s) ]]; then
-      git -C $DEST add .
-      git -C $DEST commit -m "[Automation] Update site files." -q
+    if [[ -n $(git -C "$DEST" status -s) ]]; then
+      git -C "$DEST" add .
+      git -C "$DEST" commit -m "[Automation] Update site files." -q
       echo -e "\nPlease push the changes of $DEST to remote master branch.\n"
     fi
   fi
 
-  cd .. && rm -rf $CONTAINER
+  cd .. && rm -rf "$CONTAINER"
 }
 
-
 _check_unset() {
-  if [[ -z ${1:+unset} ]]
-  then
+  if [[ -z ${1:+unset} ]]; then
     _help
     exit 1
   fi
 }
 
-
 main() {
-  while [[ $# -gt 0 ]]
-  do
+  while [[ $# -gt 0 ]]; do
     opt="$1"
     case $opt in
-      -b|--baseurl)
-        _check_unset $2
-        if [[ $2 == \/* ]]
-        then
-          CMD+=" -b $2"
-        else
-          _help
-          exit 1
-        fi
-        shift
-        shift
-        ;;
-      -d|--destination)
-        _check_unset $2
-        DEST=$(realpath $2)
-        shift;
-        shift;
-        ;;
-      -h|--help)
-        _help
-        exit 0
-        ;;
-      *) # unknown option
+    -b | --baseurl)
+      _check_unset "$2"
+      if [[ $2 == /* ]]; then
+        CMD+=" -b $2"
+      else
         _help
         exit 1
-        ;;
+      fi
+      shift
+      shift
+      ;;
+    -d | --destination)
+      _check_unset "$2"
+      DEST=$(realpath "$2")
+      shift
+      shift
+      ;;
+    -h | --help)
+      _help
+      exit 0
+      ;;
+    *) # unknown option
+      _help
+      exit 1
+      ;;
     esac
   done
 

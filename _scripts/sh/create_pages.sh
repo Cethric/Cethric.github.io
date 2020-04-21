@@ -1,4 +1,4 @@
-#!/usr/local/bin/bash
+#! /bin/bash
 #
 # Create HTML pages for Categories and Tags in posts.
 #
@@ -12,25 +12,31 @@
 
 set -eu
 
-TYPE_CATEGORY=0
-TYPE_TAG=1
-
 category_count=0
 tag_count=0
 
-read_categories() {
-  if [[ $(grep "categories:" $1) ]]; then
-    grep "categories:" $1 | head -1 | sed 's/categories: *//;s/\[//;s/\]//;s/, */,/g;s/"//g'
-  elif [[  $(grep "category:" $1) ]]; then
-    grep "category:" $1 | head -1 | sed 's/category: *//;s/\[//;s/\]//;s/, */,/g;s/"//g'
-  fi
+
+function parse_front_matter() {
+  local _filename
+  _filename=$1
+  perl _scripts/sh/parse_front_matter.pl "$_filename"
+#  local _result
+#  _result=$(perl _scripts/sh/parse_front_matter.pl "$_filename" | grep "Category:" | head | sed 's/Category: *//')
+#
+#  for i in ${_result#,}; do
+#      echo "$i"
+#  done
 }
 
+read_categories() {
+  # Only read the first 2 categories
+  echo "$1" | grep "Category:" | head -2 | sed 's/Category: *//'
+}
 
 read_tags() {
-  grep "tags:" $1 | head -1 | sed 's/tags: *//;s/\[//;s/\]//;s/, */,/g;s/"//g'
+  # Read all tags"
+  echo "$1" | grep "Tag:" | head | sed 's/Tag: *//'
 }
-
 
 init() {
   if [[ -d categories ]]; then
@@ -44,90 +50,67 @@ init() {
   mkdir categories tags
 }
 
-
 create_category() {
   local _name=$1
-  local _filepath="categories/$(echo $_name | sed 's/ /-/g' | awk '{print tolower($0)}').html"
+  local _filepath
+  _filepath="categories/$(echo "$_name" | sed 's/ /-/g' | awk '{print tolower($0)}').html"
 
   if [[ ! -f $_filepath ]]; then
-    echo "---" > $_filepath
-    echo "layout: category" >> $_filepath
-    echo "title: $_name" >> $_filepath
-    echo "category: $_name" >> $_filepath
-    echo "---" >> $_filepath
+    {
+      echo "---"
+      echo "layout: category"
+      echo "title: $_name"
+      echo "category: $_name"
+      echo "---"
+    } >"$_filepath"
 
-    ((category_count=category_count+1))
+    ((category_count = category_count + 1))
   fi
 }
-
 
 create_tag() {
   local _name=$1
-  local _filepath="tags/$( echo $_name | sed "s/ /-/g;s/'//g" | awk '{print tolower($0)}' ).html"
+  local _filepath
+  _filepath="tags/$(echo "$_name" | sed "s/ /-/g;s/'//g" | awk '{print tolower($0)}').html"
 
   if [[ ! -f $_filepath ]]; then
+    {
+      echo "---";
+      echo "layout: tag";
+      echo "title: $_name";
+      echo "tag: $_name";
+      echo "---";
+      } >"$_filepath"
 
-    echo "---" > $_filepath
-    echo "layout: tag" >> $_filepath
-    echo "title: $_name" >> $_filepath
-    echo "tag: $_name" >> $_filepath
-    echo "---" >> $_filepath
-
-    ((tag_count=tag_count+1))
+    ((tag_count = tag_count + 1))
   fi
 }
-
-
-#########################################
-# Create HTML pages for Categories/Tags.
-# Arguments:
-#   $1 - an array string
-#   $2 - type specified option
-#########################################
-create_pages() {
-  if [[ $1 == '' ]]; then
-    exit 0
-  fi
-
-  # split string to array
-  IFS_BAK=$IFS
-  IFS=','
-  local _string=$1
-
-  case $2 in
-
-    $TYPE_CATEGORY)
-      for i in ${_string#,}; do
-        create_category $i
-      done
-      ;;
-
-    $TYPE_TAG)
-      for i in ${_string#,}; do
-        create_tag $i
-      done
-      ;;
-
-    *)
-      ;;
-
-    esac
-
-    IFS=$IFS_BAK
-  }
-
 
 main() {
   init
 
-  for _file in $(ls "_posts")
-  do
-    local _path="_posts/$_file"
-    local _categories=$(read_categories "$_path")
-    local _tags=$(read_tags "$_path")
+  local _posts
+  _posts=$(ls "_posts")
 
-    create_pages "$_categories" $TYPE_CATEGORY
-    create_pages "$_tags" $TYPE_TAG
+  for _file in $_posts; do
+    local _path="_posts/$_file"
+    local _front_matter
+    _front_matter=$(parse_front_matter "$_path")
+
+    local _categories
+    _categories=$(read_categories "$_front_matter")
+    local _tags
+    _tags=$(read_tags "$_front_matter")
+
+    for i in ${_categories#,}; do
+      echo "Category: $i"
+      create_category "$i"
+    done
+
+    for i in ${_tags#,}; do
+      echo "Tag: $i"
+      create_tag "$i"
+    done
   done
 
   if [[ $category_count -gt 0 ]]; then

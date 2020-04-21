@@ -1,5 +1,6 @@
 ---
 ---
+
 /*
 * The syntax highlight.
 * v2.0
@@ -54,6 +55,7 @@ html[mode=dark] {
     background: var(--highlight-bg-color);
   }
   overflow: auto;
+
   .lineno {
     margin: .8rem 0rem;
     padding: 0 .5rem;
@@ -68,18 +70,22 @@ html[mode=dark] {
     -o-user-select: none;
     user-select: none;
   }
+
   table {
     padding: 0;
     border: 0;
+
     td pre {
-      overflow: visible;  /* Fixed iOS safari overflow-x */
+      overflow: visible; /* Fixed iOS safari overflow-x */
       word-break: normal; /* Fixed iOS safari linenos code break */
     }
   }
+
   td {
     padding: 0;
     border: 0;
   }
+
   pre {
     margin-bottom: 0;
     font-size: .85rem;
@@ -88,22 +94,26 @@ html[mode=dark] {
     /* Fixed Safari overflow-x */
   }
 
-} //.highlight
+}
+
+//.highlight
 
 code {
   -webkit-hyphens: none;
   -ms-hyphens: none;
   -moz-hyphens: none;
   hyphens: none;
+
   &.highlighter-rouge {
     padding: 2px 4px;
     margin: 0 .15rem;
     border-radius: 4px;
   }
-  @at-root a>&.highlighter-rouge {
+
+  @at-root a > &.highlighter-rouge {
     padding-bottom: 0; // show link's underlinke
   }
-  @at-root a:hover>&.highlighter-rouge {
+  @at-root a:hover > &.highlighter-rouge {
     border-bottom: none;
   }
 }
@@ -121,6 +131,7 @@ div {
     pre.lineno {
       display: none;
     }
+
     td.rouge-code {
       padding: .8rem 1rem;
     }
