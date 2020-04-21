@@ -6,6 +6,15 @@ author: Blake Rogan
 toc: true
 published: false
 title: Introduction to GraphQL
+category:
+  - Blogging
+  - Tutorial
+tags:
+  - graphql
+  - hasura
+  - apollo
+  - tutorial
+  - web-api
 ---
 
 In this blog post I will cover some basic techniques to create a GraphQL server using the Apollo Server Library and the Hasura GraphQL engine. I will then go on to provide an example of to connect a client application to the GraphQL server.
