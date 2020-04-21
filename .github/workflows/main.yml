@@ -44,8 +44,7 @@ jobs:
         run: bundler install
       - name: build
         run: ./tools/init.sh
-
-      - name: Update tags
-        run: |
-          git commit -a -m "[CI] Update Tags"
-          git push
+      - uses: actions-go/push@master
+        with:
+          commit-message: '[CI] update tags and categories'
+          remote: origin
