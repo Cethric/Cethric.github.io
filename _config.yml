@@ -215,6 +215,13 @@ prose:
           label: "Tags"
           placeholder: "Tags"
           alterable: true
+      - name: "category"
+        field:
+          element: "multiselect"
+          label: "Categories"
+          help: "Only select 2 categories (the parser will only read the first 2 any way"
+          placeholder: "Only select 2"
+          alterable: true
       - name: "layout"
         field:
           element: "hidden"
@@ -254,6 +261,13 @@ prose:
           element: "multiselect"
           label: "Tags"
           placeholder: "Tags"
+          alterable: true
+      - name: "category"
+        field:
+          element: "multiselect"
+          label: "Categories"
+          help: "Only select 2 categories (the parser will only read the first 2 any way"
+          placeholder: "Only select 2"
           alterable: true
       - name: "layout"
         field:
