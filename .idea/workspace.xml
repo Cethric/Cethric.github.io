@@ -1,19 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="a3865317-0f03-454e-9364-98d7d5f5a29f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/Cethric.github.io.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Cethric.github.io.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_drafts/2020-04-20-rubber-duck-programming.md" beforeDir="false" afterPath="$PROJECT_DIR$/_drafts/2020-04-20-rubber-duck-programming.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2020-04-20-rubber-duck-programming.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2020-04-20-rubber-duck-programming.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_scripts/sh/create_pages.sh" beforeDir="false" afterPath="$PROJECT_DIR$/_scripts/sh/create_pages.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_scripts/sh/parse_front_matter.pl" beforeDir="false" afterPath="$PROJECT_DIR$/_scripts/pl/parse_front_matter.pl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/categories/.gitkeep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/categories/blogging.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/categories/tutorial.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tags/.gitkeep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tags/graphql.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tags/tutorial.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tags/web-api.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +33,12 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
   </component>
   <component name="ProjectId" id="1aellkwJ9iBcQd7zEvnS31WCQJo" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -33,13 +50,14 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/_posts" />
+    <property name="last_opened_file_path" value="C:/Ruby27-x64/bin/ruby.exe" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="RubyDockerConfigurableProvider" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -63,25 +81,54 @@
       <updated>1587104093841</updated>
       <workItem from="1587104095341" duration="19000" />
       <workItem from="1587363323902" duration="3942000" />
-      <workItem from="1587423965454" duration="14014000" />
+      <workItem from="1587423965454" duration="14476000" />
+      <workItem from="1587442479171" duration="1624000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/.container" />
+    </ignored-roots>
+  </component>
   <component name="WindowStateProjectService">
+    <state x="728" y="263" key="#New_Docker_Connection" timestamp="1587442962388">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="728" y="263" key="#New_Docker_Connection/-1920.0.1920.1080/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1587442962388" />
     <state x="724" y="342" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1587441568855">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="724" y="342" key="#com.intellij.fileTypes.FileTypeChooser/-1920.0.1920.1080/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1587441568854" />
+    <state x="740" y="295" key="FileChooserDialogImpl" timestamp="1587442773152">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="740" y="295" key="FileChooserDialogImpl/-1920.0.1920.1080/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1587442773152" />
     <state x="766" y="242" key="RollbackChangesDialog" timestamp="1587366105030">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="766" y="242" key="RollbackChangesDialog/-1920.0.1920.1080/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1587366105030" />
-    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1587365989755">
+    <state x="461" y="185" key="SettingsEditor" timestamp="1587442946067">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup/-1920.0.1920.1080/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1587365989755" />
+    <state x="461" y="185" key="SettingsEditor/-1920.0.1920.1080/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1587442946067" />
+    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1587442958090">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup/-1920.0.1920.1080/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1587442958090" />
   </component>
 </project>
