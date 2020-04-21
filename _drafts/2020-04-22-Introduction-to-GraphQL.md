@@ -8,9 +8,7 @@ published: false
 title: Introduction to GraphQL
 ---
 
-In this blog post I will cover some basic techniques to create a GraphQL server using the Apollo Server Library
-and the Hasura GraphQL engine. I will then go on to provide an example of to connect a client application to the
-GraphQL server.
+In this blog post I will cover some basic techniques to create a GraphQL server using the Apollo Server Library and the Hasura GraphQL engine. I will then go on to provide an example of to connect a client application to the GraphQL server.
 
 # GraphQL Server
 
@@ -141,15 +139,12 @@ volumes:
     name: "GraphQLIntroPostgreSQL"
 ```
 
-The two volumes that are bound to the hasura container (ln 32 &amp; ln 37) are for the hasura metadata and 
-migrations API which can be used to automate the process of creating the container and the PostgreSQL database
+The two volumes that are bound to the hasura container (ln 32 &amp; ln 37) are for the hasura metadata and migrations API which can be used to automate the process of creating the container and the PostgreSQL database
 
 An example for this can be [found here](https://github.com/Cethric/GraphQLIntro/tree/master/hasura)
 
 # GraphQL Client
-When connecting to GraphQL using the GraphQL client there is a [common part](#apollo-graphql-client) and
-there may be a plugin for the front end framework being used to display content to the user. In this example
-it is [VueJS](#vuejs-web-application)
+When connecting to GraphQL using the GraphQL client there is a [common part](#apollo-graphql-client) and there may be a plugin for the front end framework being used to display content to the user. In this example it is [VueJS](#vuejs-web-application)
 
 An example for this can be [found here](https://github.com/Cethric/GraphQLIntro/tree/master/apollo-client)
 
