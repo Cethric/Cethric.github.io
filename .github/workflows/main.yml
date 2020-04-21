@@ -30,7 +30,7 @@ jobs:
     - name: Setup Ruby
       run: sudo apt install ruby
     - name: Setup bundler
-      run: gem install bundler
+      run: sudo gem install bundler
     - name: Setup Jekyll
       run: bundler install
     - name: build
