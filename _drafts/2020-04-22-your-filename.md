@@ -5,7 +5,7 @@ time: '2020-04-22 09:05 +1000'
 author: Blake Rogan
 toc: true
 published: false
-title: ''
+title: Introduction to GraphQL
 ---
 
 In this blog post I will cover some basic techniques to create a GraphQL server using the Apollo Server Library
