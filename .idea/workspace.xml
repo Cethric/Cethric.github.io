@@ -20,12 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a3865317-0f03-454e-9364-98d7d5f5a29f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/main.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/data/pv-data.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/data/pv-data.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/data/search.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/data/search.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/dist/commons.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/dist/commons.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/build.sh" beforeDir="false" afterPath="$PROJECT_DIR$/tools/build.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,6 +82,7 @@
       <workItem from="1587363323902" duration="3942000" />
       <workItem from="1587423965454" duration="14476000" />
       <workItem from="1587442479171" duration="2416000" />
+      <workItem from="1587445044753" duration="937000" />
     </task>
     <servers />
   </component>
@@ -101,6 +99,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <ignored-roots>

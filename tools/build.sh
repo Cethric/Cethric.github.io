@@ -40,7 +40,7 @@ _init() {
 
   local _temp
   _temp=$(mktemp -d)
-  cp -r "*" "$_temp"
+  cp -r * "$_temp"
   cp -r .git "$_temp"
   mv "$_temp" "$CONTAINER"
 }
