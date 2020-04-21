@@ -165,6 +165,8 @@ prose:
     - _layouts
     - _scripts
     - assets
+    - categories
+    - tags
     - tools
     - Gemfile
     - Gemfile.lock
