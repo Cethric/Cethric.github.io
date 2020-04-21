@@ -43,4 +43,9 @@ jobs:
         if: steps.bundle-cache.outputs.cache-hit != 'true'
         run: bundler install
       - name: build
-        run: ./tools/build.sh
+        run: ./tools/init.sh
+
+      - name: Update tags
+        run: |
+          git commit -a -m "[CI] Update Tags"
+          git push
