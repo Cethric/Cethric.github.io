@@ -15,17 +15,16 @@ set -eu
 category_count=0
 tag_count=0
 
-
 function parse_front_matter() {
   local _filename
   _filename=$1
-  perl _scripts/sh/parse_front_matter.pl "$_filename"
-#  local _result
-#  _result=$(perl _scripts/sh/parse_front_matter.pl "$_filename" | grep "Category:" | head | sed 's/Category: *//')
-#
-#  for i in ${_result#,}; do
-#      echo "$i"
-#  done
+  perl _scripts/pl/parse_front_matter.pl "$_filename"
+  #  local _result
+  #  _result=$(perl _scripts/sh/parse_front_matter.pl "$_filename" | grep "Category:" | head | sed 's/Category: *//')
+  #
+  #  for i in ${_result#,}; do
+  #      echo "$i"
+  #  done
 }
 
 read_categories() {
@@ -75,12 +74,12 @@ create_tag() {
 
   if [[ ! -f $_filepath ]]; then
     {
-      echo "---";
-      echo "layout: tag";
-      echo "title: $_name";
-      echo "tag: $_name";
-      echo "---";
-      } >"$_filepath"
+      echo "---"
+      echo "layout: tag"
+      echo "title: $_name"
+      echo "tag: $_name"
+      echo "---"
+    } >"$_filepath"
 
     ((tag_count = tag_count + 1))
   fi
@@ -94,6 +93,11 @@ main() {
 
   for _file in $_posts; do
     local _path="_posts/$_file"
+
+    echo -e "Updating Posts: $_path\n"
+
+    perl _scripts/pl/parse_front_matter.pl "$_path"
+
     local _front_matter
     _front_matter=$(parse_front_matter "$_path")
 

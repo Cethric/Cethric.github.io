@@ -6,6 +6,11 @@ author: Blake Rogan
 toc: true
 published: true
 title: Rubber Duck Programming
-tags: ''
+categories: 
+    - Blogging
+    - Tutorial
+tags: 
+    - rubber-duck
+    - efficiency
 ---
 What is rubber duck programming and how can I use it to become a better programmer?
