@@ -77,13 +77,7 @@ $tab-height: 3.3rem;
 $tab-cursor-height: 1.6rem;
 
 // @formatter:off
-$tab-count:{
-{
-site.data.tabs | size
-
-}
-}
-;
+$tab-count:{{site.data.tabs | size}};
 // @formatter:on
 
 #sidebar {
