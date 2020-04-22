@@ -1,5 +1,4 @@
 ---
-layout: post
 excerpt_separator: <!-- content -->
 time: '2020-04-22 09:05 +1000'
 author: Blake Rogan
@@ -53,48 +52,11 @@ Something to note however is that types are only outputs to be able to bundle ar
 
 #### Example
 An example schema is defined bellow for a simple book database where a user can query for all books or for a specific book by title. They are also able to insert a new book into the database:
-```graphql
-type Book {
-	title: String
-	author: String
-}
-
-type Query {
-	books: [Book]!
-
-	book(title:String!): Book
-}
-
-type Mutation {
-	insert_book(title:String! author:String!): Boolean!
-}
-
-```
 
 For more information about how to create GraphQL schemas [look here](https://graphql.org/learn/schema)
 
 ### The Resolvers
 Resolvers can be declared in the following way
-
-
-```typescript
-const resolvers: Resolvers = {
-    Query: {
-        books: (source, args, context) => {
-            return context.data.books();
-        },
-        book: (source, {title}, context) => {
-            return context.data.book(title);
-        },
-    },
-    Mutation: {
-        insert_book: (source, {title, author}, context) => {
-            return context.data.insertBook(title, author);
-        }
-    },
-}
-
-```
 
 
 ### The Server
