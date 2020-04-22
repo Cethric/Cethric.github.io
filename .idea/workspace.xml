@@ -21,28 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a3865317-0f03-454e-9364-98d7d5f5a29f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/disqus.html" beforeDir="false" afterPath="$PROJECT_DIR$/_includes/disqus.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/favicons.html" beforeDir="false" afterPath="$PROJECT_DIR$/_includes/favicons.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/fixlinenos.html" beforeDir="false" afterPath="$PROJECT_DIR$/_includes/fixlinenos.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/_includes/footer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/google-analytics.html" beforeDir="false" afterPath="$PROJECT_DIR$/_includes/google-analytics.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/head.html" beforeDir="false" afterPath="$PROJECT_DIR$/_includes/head.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/lozad.html" beforeDir="false" afterPath="$PROJECT_DIR$/_includes/lozad.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/mode-toggle.html" beforeDir="false" afterPath="$PROJECT_DIR$/_includes/mode-toggle.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/panel.html" beforeDir="false" afterPath="$PROJECT_DIR$/_includes/panel.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/post-nav.html" beforeDir="false" afterPath="$PROJECT_DIR$/_includes/post-nav.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/post-paginator.html" beforeDir="false" afterPath="$PROJECT_DIR$/_includes/post-paginator.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/post-sharing.html" beforeDir="false" afterPath="$PROJECT_DIR$/_includes/post-sharing.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/related-posts.html" beforeDir="false" afterPath="$PROJECT_DIR$/_includes/related-posts.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/search-loader.html" beforeDir="false" afterPath="$PROJECT_DIR$/_includes/search-loader.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/search-results.html" beforeDir="false" afterPath="$PROJECT_DIR$/_includes/search-results.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/sidebar.html" beforeDir="false" afterPath="$PROJECT_DIR$/_includes/sidebar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/topbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/_includes/topbar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/trending-tags.html" beforeDir="false" afterPath="$PROJECT_DIR$/_includes/trending-tags.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_layouts/compress.html" beforeDir="false" afterPath="$PROJECT_DIR$/_layouts/compress.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_layouts/default.html" beforeDir="false" afterPath="$PROJECT_DIR$/_layouts/default.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_layouts/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/_layouts/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_layouts/page.html" beforeDir="false" afterPath="$PROJECT_DIR$/_layouts/page.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
