@@ -49,10 +49,12 @@ As well as the predefined `Query`, `Mutation` and `Subscription` types GraphQL a
 
 For example, it is possible to create a `Book` type that contains a custom `BookId` scalar
 
-Something to note however is that types are only outputs to be able to bundle arguments together the [`input`][input-types] type needs to be used
+Something to note however is that types are only outputs to be able to bundle arguments together the [`input`][input-types] type needs to be used.
+
+Unlike some typesafe languages which assume a value is not `null` by default GraphQL does the opposite and will assume a value is `nullable` unless decalred otherwise with the exclaimation mark (`!`) operator
 
 #### Example
-An example schema is defined bellow for a simple book database where a user can query for all books or for a specific book by title. They are also able to insert a new book into the database:
+An example schema is defined bellow for a simple book database where a user can query for all books or for a specific book by title. They are also able to insert a new book into the database.
 ```graphql
 type Book {
 	title: String
@@ -84,6 +86,7 @@ In the example of an Apollo GraphQL server resolvers link a schema type to it's 
 | `context` | a shared object between all resolvers for a particular operation. This can be used to share state |
 | `info` | Information about the current operation's execution state |
 
+Each of these function will return a result that matches the format defined in the return type of the GraphQL schema.
 
 ```typescript
 const resolvers: Resolvers = {
