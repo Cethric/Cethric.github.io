@@ -109,7 +109,7 @@ const resolvers: Resolvers = {
 
 
 ### The Server
-Finally a GraphQL server is declared where the schema (`typeDefs`) `resolvers` and `context` are brought together in a single object and the server is then launched. In this example the server will expose the [GraphiQL][graphiql-link] IDE to <`http://localhost:3000`> which is also the same endpoint address for the GraphQL api
+Finally a GraphQL server is declared where the schema (`typeDefs`) `resolvers` and `context` are brought together in a single object and the server is then launched. In this example the server will expose the [GraphiQL][graphiql-link] IDE to [`http://localhost:3000`](http://localhost:3000) which is also the same endpoint address for the GraphQL api
 
 ```typescript
 const server = new ApolloServer({
@@ -135,6 +135,7 @@ server.listen({
 ## Hasura GraphQL Engine
 The [Hasura GraphQL Engine][hasura-home-page] is an alternative batteries included approach to creating a GraphQL server compared to the Apollo GraphQL Server.
 
+### Running the server
 Hasura can be launched using the following docker compose script
 ```yaml
 version: "3.7"
@@ -146,7 +147,7 @@ services:
       - "5432:5432"
     restart: always
     environment:
-      POSTGRES_PASSWORD: databasePassword
+      POSTGRES_PASSWORD: ChangeThisDatabasePassword
     volumes:
       - type: volume
         source: database
@@ -162,10 +163,10 @@ services:
     ports:
       - "8090:8080"
     environment:
-      HASURA_GRAPHQL_DATABASE_URL: postgres://postgres:databasePassword@postgres:5432/postgres
+      HASURA_GRAPHQL_DATABASE_URL: postgres://postgres:ChangeThisDatabasePassword@postgres:5432/postgres
       HASURA_GRAPHQL_ENABLE_CONSOLE: "false"
       HASURA_GRAPHQL_ENABLED_LOG_TYPES: startup, http-log, webhook-log, websocket-log, query-log
-      HASURA_GRAPHQL_ADMIN_SECRET: "hasuraSecret"
+      HASURA_GRAPHQL_ADMIN_SECRET: "ChangeThisSecretKey"
       HASURA_GRAPHQL_UNAUTHORIZED_ROLE: "public"
     volumes:
       - type: bind
@@ -186,6 +187,18 @@ volumes:
 The two volumes that are bound to the hasura container (ln 32 &amp; ln 37) are for the hasura metadata and migrations API which can be used to automate the process of creating the container and the PostgreSQL database
 
 An example for this can be [found here](https://github.com/Cethric/GraphQLIntro/tree/master/hasura)
+
+
+### Connecting to the server
+When accessing hasura for the first time which in this example is available at [`http://localhost:8090`](http://localhost:8090) you will need to enter the secret key (`ChangeThisSecretKey`) to be granted admin priveledges where you can start defining the structure of the `postgreSQL` tables, the permissions on each row and column of a table and any custom actions, triggers or remote schemas that should be joined.
+
+#### Defining a Schema
+
+#### Custom Actions
+
+#### Triggered Events
+
+#### Remote Schemas
 
 # GraphQL Client
 When connecting to GraphQL using the GraphQL client there is a [common part](#apollo-graphql-client) and there may be a plugin for the front end framework being used to display content to the user. In this example it is [VueJS](#vuejs-web-application)
