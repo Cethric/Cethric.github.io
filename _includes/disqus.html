@@ -7,20 +7,20 @@
   MIT License
 -->
 
-<div class="pt-2 pb-4" id="disqus">
-    <p class="font-italic text-muted small">Comments powered by <a href="https://disqus.com/">Disqus</a>.</p>
+<div id="disqus" class="pt-2 pb-4">
+  <p class="font-italic text-muted small">Comments powered by <a href="https://disqus.com/">Disqus</a>.</p>
 </div>
 
 <script src="{{ site.baseurl }}/assets/lib/jquery.disqusloader.min.js"></script>
 <script>
-    var options = {
-        scriptUrl: '//{{ site.disqus.shortname }}.disqus.com/embed.js',
+  var options = {
+    scriptUrl: '//{{ site.disqus.shortname }}.disqus.com/embed.js',
 
-        disqusConfig: function () {
-            this.page.url = '{{ site.url | append: site.baseurl | append: page.url }}';
-            this.page.identifier = '{{ page.url }}';
-        }
-    };
+    disqusConfig: function() {
+      this.page.url = '{{ site.url | append: site.baseurl | append: page.url }}';
+      this.page.identifier = '{{ page.url }}';
+    }
+  };
 
-    $.disqusLoader('#disqus', options);
+  $.disqusLoader('#disqus', options);
 </script>

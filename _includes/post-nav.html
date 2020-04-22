@@ -8,24 +8,24 @@
 -->
 
 <div class="post-navigation d-flex justify-content-between">
-    {% if page.previous.url %}
-    <a class="btn btn-outline-primary" href="{{ site.baseurl }}{{ page.previous.url }}">
-        <p>{{ page.previous.title }}</p>
-    </a>
-    {% else %}
-    <span class="btn btn-outline-primary disabled">
+  {% if page.previous.url %}
+  <a href="{{ site.baseurl }}{{ page.previous.url }}" class="btn btn-outline-primary">
+    <p>{{ page.previous.title }}</p>
+  </a>
+  {% else %}
+  <span class="btn btn-outline-primary disabled">
     <p>-</p>
   </span>
-    {% endif %}
+  {% endif %}
 
-    {% if page.next.url %}
-    <a class="btn btn-outline-primary" href="{{ site.baseurl }}{{page.next.url}}">
-        <p>{{ page.next.title }}</p>
-    </a>
-    {% else %}
-    <span class="btn btn-outline-primary disabled">
+  {% if page.next.url %}
+  <a href="{{ site.baseurl }}{{page.next.url}}" class="btn btn-outline-primary">
+    <p>{{ page.next.title }}</p>
+  </a>
+  {% else %}
+  <span class="btn btn-outline-primary disabled">
     <p>-</p>
   </span>
-    {% endif %}
+  {% endif %}
 
 </div>

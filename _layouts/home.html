@@ -22,7 +22,7 @@ layout: page
         <div class="post-meta text-muted">
             <!-- posted date -->
             <i class="far fa-clock fa-fw"></i>
-            <span class="timeago" data-placement="bottom" data-toggle="tooltip"
+            <span class="timeago" data-toggle="tooltip" data-placement="bottom"
                   title="{{ post.date | date: site.data.date_format.tooltip }}">
       {{ post.date | date: site.data.date_format.post }}
       <i class="unloaded">{{ post.date | date_to_xmlschema }}</i>
@@ -30,7 +30,7 @@ layout: page
             <!-- page views -->
             {% if site.google_analytics.pv.enabled %}
             <i class="far fa-eye fa-fw"></i>
-            <span class="pageviews" id="pv_{{-post.title-}}">
+            <span id="pv_{{-post.title-}}" class="pageviews">
         <i class="fas fa-spinner fa-spin fa-fw"></i>
       </span>
             {% endif %}

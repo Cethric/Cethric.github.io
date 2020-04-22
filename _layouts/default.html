@@ -15,12 +15,12 @@ mode="{{ site.theme_mode }}"
 {% endif %}
 {% endcapture %}
 
-<html lang="en" prefer_mode {{ }}>
+<html lang="en" {{ prefer_mode }} >
 
 {% include head.html %}
 
 <body data-spy="scroll" data-target="#toc">
-<div class="d-flex flex-column" id="sidebar">
+<div id="sidebar" class="d-flex flex-column">
     {% include sidebar.html %}
 </div>
 <div id="main-wrapper">
@@ -41,7 +41,7 @@ mode="{{ site.theme_mode }}"
 
 <div id="mask"></div>
 
-<a class="btn btn-lg btn-box-shadow" href="#" id="back-to-top" role="button">
+<a id="back-to-top" href="#" class="btn btn-lg btn-box-shadow" role="button">
     <i class="fas fa-angle-up"></i>
 </a>
 

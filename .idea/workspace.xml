@@ -20,7 +20,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a3865317-0f03-454e-9364-98d7d5f5a29f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/_posts/2020-04-22-Introduction-to-GraphQL.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2020-04-22-Introduction-to-GraphQL.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_includes/disqus.html" beforeDir="false" afterPath="$PROJECT_DIR$/_includes/disqus.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_includes/favicons.html" beforeDir="false" afterPath="$PROJECT_DIR$/_includes/favicons.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_includes/fixlinenos.html" beforeDir="false" afterPath="$PROJECT_DIR$/_includes/fixlinenos.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_includes/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/_includes/footer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_includes/google-analytics.html" beforeDir="false" afterPath="$PROJECT_DIR$/_includes/google-analytics.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_includes/head.html" beforeDir="false" afterPath="$PROJECT_DIR$/_includes/head.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_includes/lozad.html" beforeDir="false" afterPath="$PROJECT_DIR$/_includes/lozad.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_includes/mode-toggle.html" beforeDir="false" afterPath="$PROJECT_DIR$/_includes/mode-toggle.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_includes/panel.html" beforeDir="false" afterPath="$PROJECT_DIR$/_includes/panel.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_includes/post-nav.html" beforeDir="false" afterPath="$PROJECT_DIR$/_includes/post-nav.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_includes/post-paginator.html" beforeDir="false" afterPath="$PROJECT_DIR$/_includes/post-paginator.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_includes/post-sharing.html" beforeDir="false" afterPath="$PROJECT_DIR$/_includes/post-sharing.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_includes/related-posts.html" beforeDir="false" afterPath="$PROJECT_DIR$/_includes/related-posts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_includes/search-loader.html" beforeDir="false" afterPath="$PROJECT_DIR$/_includes/search-loader.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_includes/search-results.html" beforeDir="false" afterPath="$PROJECT_DIR$/_includes/search-results.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_includes/sidebar.html" beforeDir="false" afterPath="$PROJECT_DIR$/_includes/sidebar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_includes/topbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/_includes/topbar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_includes/trending-tags.html" beforeDir="false" afterPath="$PROJECT_DIR$/_includes/trending-tags.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_layouts/compress.html" beforeDir="false" afterPath="$PROJECT_DIR$/_layouts/compress.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_layouts/default.html" beforeDir="false" afterPath="$PROJECT_DIR$/_layouts/default.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_layouts/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/_layouts/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_layouts/page.html" beforeDir="false" afterPath="$PROJECT_DIR$/_layouts/page.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,6 +114,11 @@
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
+        <entry key="1">
+          <value>
+            <State />
+          </value>
+        </entry>
         <entry key="MAIN">
           <value>
             <State />
@@ -127,6 +154,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="461" y="185" key="SettingsEditor/-1920.0.1920.1080/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1587444721676" />
+    <state x="807" y="454" key="VCS.ChangelistChooser" timestamp="1587526623301">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="807" y="454" key="VCS.ChangelistChooser/-1920.0.1920.1080/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1587526623301" />
     <state x="623" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1587451626243">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
