@@ -39,6 +39,7 @@ In GraphQL a schema defines fields that can be queried, mutated or subscribed to
 When defining a GraphQL schema there are a few key parts that must be present. These include the `Root` type (some GraphQL server libraries may automatically define this) which is used to group the [`Query`, `Mutation` and `Subscription`][the-query-and-mutation-types] types together. A `Query` type should be defined if there are any queries that can be made in the api, A `Mutation` type should be defined if there are any mutations that can be made and a `Subscription` type should be defined if a user is able to subscribe to server events (This feature uses websockets so that the server can notify the client of an event)
 
 As well as the predefined `Query`, `Mutation` and `Subscription` types GraphQL allows you to define custom types. This is acheived using the [`type`][object-types-and-fields] keyword for custom objects and the [`scalar`][scalar-types] keyword for custom scalars (such as Apollo file uploading facility or the `_uuid` in Hasura).
+
 For example it is possible to create a `Book` type that contains a custom `BookId` scalar
 
 ```graphql
@@ -50,6 +51,8 @@ type Book {
     author: String
 }
 ```
+
+Something to note however is that types are only outputs to be able to bundle arguments together the [`input`][input-types] type needs to be used
 
 #### Example
 An example schema is defined bellow for a simple book database where a user can query for all books or for a specific book by title. They are also able to insert a new book into the database:
@@ -256,5 +259,5 @@ export default class Details extends Vue {
 [the-query-and-mutation-types]: https://graphql.org/learn/schema/#the-query-and-mutation-types
 [object-types-and-fields]: https://graphql.org/learn/schema/#object-types-and-fields
 [scalar-types]: https://graphql.org/learn/schema/#scalar-types
-
+[input-types]: https://graphql.org/learn/schema/#input-types
 
