@@ -109,7 +109,7 @@ const resolvers: Resolvers = {
 
 
 ### The Server
-Finally a GraphQL server is declared where the schema (`typeDefs`) `resolvers` and `context` are brought together in a single object and the server is then launched. In this example the server will expose the [GraphiQL][graphiql-link] IDE to `http://localhost:3000` which is also the same endpoint address for the GraphQL api
+Finally a GraphQL server is declared where the schema (`typeDefs`) `resolvers` and `context` are brought together in a single object and the server is then launched. In this example the server will expose the [GraphiQL][graphiql-link] IDE to <`http://localhost:3000`> which is also the same endpoint address for the GraphQL api
 
 ```typescript
 const server = new ApolloServer({
