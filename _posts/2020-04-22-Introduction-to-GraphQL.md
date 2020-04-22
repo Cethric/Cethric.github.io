@@ -51,6 +51,7 @@ type Book {
     title: String
     author: String
 }
+
 ```
 
 Something to note however is that types are only outputs to be able to bundle arguments together the [`input`][input-types] type needs to be used
@@ -72,6 +73,7 @@ type Query {
 type Mutation {
 	insert_book(title:String! author:String!): Boolean!
 }
+
 ```
 
 For more information about how to create GraphQL schemas [look here](https://graphql.org/learn/schema)
@@ -96,6 +98,7 @@ const resolvers: Resolvers = {
         }
     },
 }
+
 ```
 
 
@@ -120,6 +123,7 @@ server.listen({
     console.error('Failed to launch server');
     console.error(reason);
 });
+
 ```
 
 ## Hasura GraphQL Engine

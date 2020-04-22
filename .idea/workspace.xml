@@ -20,7 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a3865317-0f03-454e-9364-98d7d5f5a29f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2020-04-22-Introduction-to-GraphQL.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2020-04-22-Introduction-to-GraphQL.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +83,7 @@
       <workItem from="1587423965454" duration="14476000" />
       <workItem from="1587442479171" duration="2416000" />
       <workItem from="1587445044753" duration="3283000" />
-      <workItem from="1587510557652" duration="3170000" />
+      <workItem from="1587510557652" duration="3557000" />
     </task>
     <servers />
   </component>
