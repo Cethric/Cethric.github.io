@@ -109,7 +109,7 @@ const resolvers: Resolvers = {
 
 
 ### The Server
-The server can be declared in the following way
+Finally a GraphQL server is declared where the schema (`typeDefs`) `resolvers` and `context` are brought together in a single object and the server is then launched. In this example the server will expose the [Graph<i>i<i>QL][graphiql-link] IDE to `http://localhost:3000` which is also the same endpoint address for the GraphQL api
 
 ```typescript
 const server = new ApolloServer({
@@ -273,3 +273,4 @@ export default class Details extends Vue {
 [object-types-and-fields]: https://graphql.org/learn/schema/#object-types-and-fields
 [scalar-types]: https://graphql.org/learn/schema/#scalar-types
 [input-types]: https://graphql.org/learn/schema/#input-types
+[graphiql-link]: https://github.com/graphql/graphiql
