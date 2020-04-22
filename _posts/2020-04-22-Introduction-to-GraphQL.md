@@ -71,10 +71,18 @@ type Mutation {
 
 ```
 
-For more information about how to create GraphQL schemas [look here](https://graphql.org/learn/schema)
+For more information about how to create GraphQL schemas [visit the GraphQL website here](https://graphql.org/learn/schema)
 
 ### The Resolvers
-Resolvers can be declared in the following way
+Resolvers are used to connect the GraphQL schema to an action in the server. 
+
+In the example of an Apollo GraphQL server resolvers link a schema type to it's respective response, each response is a function that can take upto four arguments.
+
+|---|---|
+| `parent`/`source` | The result of the parent resolver (the previous resolver in the chain) |
+| `args` | an object of input arguments from the GraphQL schema |
+| `context` | a shared object between all resolvers for a particular operation. This can be used to share state |
+| `info` | Information about the current operation's execution state |
 
 
 ```typescript
@@ -262,4 +270,3 @@ export default class Details extends Vue {
 [object-types-and-fields]: https://graphql.org/learn/schema/#object-types-and-fields
 [scalar-types]: https://graphql.org/learn/schema/#scalar-types
 [input-types]: https://graphql.org/learn/schema/#input-types
-
