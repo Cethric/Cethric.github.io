@@ -133,6 +133,7 @@ server.listen({
 ```
 
 ## Hasura GraphQL Engine
+The [Hasura GraphQL Engine][hasura-home-page] is an alternative batteries included approach to creating a GraphQL server compared to the Apollo GraphQL Server.
 
 Hasura can be launched using the following docker compose script
 ```yaml
@@ -262,12 +263,13 @@ export default class Details extends Vue {
 # Links
 [GraphQL](https://graphql.org/)
 
-[Apollo GraphQL](https://www.apollographql.com/)
+[Apollo GraphQL][hasura-home-page]
 
 [Hasura GraphQL Engine](https://hasura.io/)
 
 [Example Project](https://github.com/Cethric/GraphQLIntro)
 
+[hasura-home-page]: https://www.apollographql.com/
 [apollo-example]: https://github.com/Cethric/GraphQLIntro/tree/master/apollo
 [the-query-and-mutation-types]: https://graphql.org/learn/schema/#the-query-and-mutation-types
 [object-types-and-fields]: https://graphql.org/learn/schema/#object-types-and-fields
