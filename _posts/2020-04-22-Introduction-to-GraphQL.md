@@ -19,7 +19,7 @@ tags:
 
 What is GraphQL and how do I use it?
 
-An incomplete introduction to GraphQL
+An incomplete introduction to GraphQL.
 
 <!-- content -->
 
