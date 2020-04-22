@@ -180,15 +180,7 @@ An example for this can be [found here](https://github.com/Cethric/GraphQLIntro/
 
 
 ### Connecting to the server
-When accessing hasura for the first time which in this example is available at [`http://localhost:8090`](http://localhost:8090) you will need to enter the secret key (`ChangeThisSecretKey`) to be granted admin priveledges where you can start defining the structure of the `postgreSQL` tables, the permissions on each row and column of a table and any custom actions, triggers or remote schemas that should be joined.
-
-#### Defining a Schema
-
-#### Custom Actions
-
-#### Triggered Events
-
-#### Remote Schemas
+When accessing hasura for the first time in a web browser (which in this example is available at [`http://localhost:8090`](http://localhost:8090)) you will need to enter the secret key (`ChangeThisSecretKey`) to be granted admin priveledges where you can start defining the structure of the `PostgreSQL` tables, the permissions on each row and column of a table and any custom actions, triggers or remote schemas that should be joined.
 
 # GraphQL Client
 When connecting to GraphQL using the GraphQL client there is a [common part](#apollo-graphql-client) and there may be a plugin for the front end framework being used to display content to the user. In this example it is [VueJS](#vuejs-web-application)
