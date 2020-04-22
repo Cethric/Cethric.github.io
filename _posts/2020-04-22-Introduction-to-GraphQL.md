@@ -16,59 +16,58 @@ tags:
   - tutorial
   - web-api
 ---
-
 What is GraphQL and how do I use it?
 
 An incomplete introduction to GraphQL.
 
 <!-- content -->
 
-In this blog post I will cover some basic techniques to create a GraphQL server using the Apollo Server Library and the Hasura GraphQL engine. I will then go on to provide an example of to connect a client application to the GraphQL server.
+In this blog post, I will cover some basic techniques to create a GraphQL server using the Apollo Server Library and the Hasura GraphQL engine. I will then go on to provide an example of how to connect a client application to the GraphQL server.
 I should also note that this tutorial does not cover all of the features of GraphQL but only a few of them
 
 # GraphQL Server
 
 ##  Apollo GraphQL Server
 
-When designing a Apollo GraphQL server 3 key areas need to be considered;
+When designing an Apollo GraphQL server 3 key areas need to be considered;
 
-- [The Schema](#the-schema) &mdash; provides structure to the API and defines what the types, queries, mutations and subscriptions look like and how they can be used
-- [The Resolvers](#the-resolvers) &mdash; are a way to descript what each query, mutation and subscription will do.
-- [The Server](#the-server) &mdash; is the final part that wraps the schema and resolvers together in to a functional API that can be consumed by a [GraphQL client](#graphql-client)
+- [The Schema](#the-schema) &mdash; provides structure to the API and defines what the types, queries, mutations, and subscriptions look like and how they can be used
+- [The Resolvers](#the-resolvers) &mdash; are a way to descript what each query, mutation, and subscription will do.
+- [The Server](#the-server) &mdash; is the final part that wraps the schema and resolvers together into a functional API that can be consumed by a [GraphQL client](#graphql-client)
 
-An example for how this all links together can be [found here][apollo-example]
+An example of how this all links together can be [found here][apollo-example]
 
 
 ### The Schema
-In GraphQL a schema defines fields that can be queried, mutated or subscribed to and what the type of those fields are. GraphQL provides a Domain Specific Language (DSL) known as the GraphQL Schema Definition Language (SDL) which is used to create these schemas.
+In GraphQL a schema defines fields that can be queried, mutated, or subscribed to and what the type of those fields are. GraphQL provides a Domain Specific Language (DSL) known as the GraphQL Schema Definition Language (SDL) which is used to create these schemas.
 
 #### What makes a schema
-When defining a GraphQL schema there are a few key parts that must be present. These include the `Root` type (some GraphQL server libraries may automatically define this) which is used to group the [`Query`, `Mutation` and `Subscription`][the-query-and-mutation-types] types together. A `Query` type should be defined if there are any queries that can be made in the api, A `Mutation` type should be defined if there are any mutations that can be made and a `Subscription` type should be defined if a user is able to subscribe to server events (This feature uses websockets so that the server can notify the client of an event)
+When defining a GraphQL schema there are a few key parts that must be present. These include the `Root` type (some GraphQL server libraries may automatically define this) which is used to group the [`Query`, `Mutation`, and `Subscription`][the-query-and-mutation-types] types. A `Query` type should be defined if there are any queries that can be made in the API, A `Mutation` type should be defined if there are any mutations that can be made and a `Subscription` type should be defined if a user can subscribe to server events (This feature uses WebSockets so that the server can notify the client of an event)
 
-As well as the predefined `Query`, `Mutation` and `Subscription` types GraphQL allows you to define custom types. This is acheived using the [`type`][object-types-and-fields] keyword for custom objects and the [`scalar`][scalar-types] keyword for custom scalars (such as Apollo file uploading facility or the `_uuid` in Hasura).
+As well as the predefined `Query`, `Mutation` and `Subscription` types GraphQL allows you to define custom types. This is achieved using the [`type`][object-types-and-fields] keyword for custom objects and the [`scalar`][scalar-types] keyword for custom scalars (such as Apollo file uploading facility or the `_uuid` in Hasura).
 
 For example, it is possible to create a `Book` type that contains a custom `BookId` scalar
 
-Something to note however is that types are only outputs to be able to bundle arguments together the [`input`][input-types] type needs to be used.
+Something to note however is that types are only output to be able to bundle arguments together the [`input`][input-types] type needs to be used.
 
-Unlike some typesafe languages which assume a value is not `null` by default GraphQL does the opposite and will assume a value is `nullable` unless decalred otherwise with the exclaimation mark (`!`) operator
+Unlike some typesafe languages which assume a value is not `null` by default, GraphQL does the opposite and will assume a value is `nullable` unless declared otherwise with the exclamation mark (`!`) operator
 
 #### Example
-An example schema is defined bellow for a simple book database where a user can query for all books or for a specific book by title. They are also able to insert a new book into the database.
+An example schema is defined below for a simple book database where a user can query for all books or a specific book by title. They are also able to insert a new book into the database.
 ```graphql
 type Book {
-	title: String
-	author: String
+    title: String
+    author: String
 }
 
 type Query {
-	books: [Book]!
+    books: [Book]!
 
-	book(title:String!): Book
+    book(title: String!): Book
 }
 
 type Mutation {
-	insert_book(title:String! author:String!): Boolean!
+    insert_book(title:String! author:String!): Boolean!
 }
 
 ```
@@ -78,7 +77,7 @@ For more information about how to create GraphQL schemas [visit the GraphQL webs
 ### The Resolvers
 Resolvers are used to connect the GraphQL schema to an action in the server. 
 
-In the example of an Apollo GraphQL server resolvers link a schema type to it's respective response, each response is a function that can take upto four arguments.
+In the example of an Apollo GraphQL server resolvers link a schema type to its respective response, each response is a function that can take up to four arguments.
 
 |---|---|
 | `parent`/`source` | The result of the parent resolver (the previous resolver in the chain) |
@@ -86,7 +85,7 @@ In the example of an Apollo GraphQL server resolvers link a schema type to it's 
 | `context` | a shared object between all resolvers for a particular operation. This can be used to share state |
 | `info` | Information about the current operation's execution state |
 
-Each of these function will return a result that matches the format defined in the return type of the GraphQL schema.
+Each of these functions will return a result that matches the format defined in the return type of the GraphQL schema.
 
 ```typescript
 const resolvers: Resolvers = {
@@ -109,7 +108,7 @@ const resolvers: Resolvers = {
 
 
 ### The Server
-Finally a GraphQL server is declared where the schema (`typeDefs`) `resolvers` and `context` are brought together in a single object and the server is then launched. In this example the server will expose the [GraphiQL][graphiql-link] IDE to [`http://localhost:3000`](http://localhost:3000) which is also the same endpoint address for the GraphQL api
+Finally, a GraphQL server is declared where the schema (`typeDefs`) `resolvers` and `context` are brought together in a single object and the server is then launched. In this example, the server will expose the [GraphiQL][graphiql-link] IDE to [`http://localhost:3000`](http://localhost:3000) which is also the same endpoint address for the GraphQL API
 
 ```typescript
 const server = new ApolloServer({
@@ -133,10 +132,10 @@ server.listen({
 ```
 
 ## Hasura GraphQL Engine
-The [Hasura GraphQL Engine][hasura-home-page] is an alternative batteries included approach to creating a GraphQL server compared to the Apollo GraphQL Server. It makes use of a PostgreSQL database for storage and a web interface / rest api to manage and interact with the server. Hasura allows for other GraphQL servers, microservices and other serverless code to be merged into a single GraphQL endpoint making it easier to manage and access from the clients machine.
+The [Hasura GraphQL Engine][hasura-home-page] is an alternative batteries included approach to creating a GraphQL server compared to the Apollo GraphQL Server. It makes use of a PostgreSQL database for storage and a web interface/rest API to manage and interact with the server. Hasura allows for other GraphQL servers, microservices and other serverless code to be merged into a single GraphQL endpoint making it easier to manage and access from the clients' machine.
 
 ### Running the server
-Hasura can be launched using the following docker compose script
+Hasura can be launched using the following docker-compose script
 ```yaml
 version: "3.7"
 
@@ -174,18 +173,18 @@ volumes:
     name: "GraphQLIntroPostgreSQL"
 ```
 
-The two volumes that are bound to the hasura container (ln 32 &amp; ln 37) are for the hasura metadata and migrations API which can be used to automate the process of creating the container and the PostgreSQL database
+The two volumes that are bound to the Hasura container (ln 32 &amp; ln 37) are for the Hasura metadata and migrations API which can be used to automate the process of creating the container and the PostgreSQL database
 
-An example for this can be [found here](https://github.com/Cethric/GraphQLIntro/tree/master/hasura)
+An example of this can be [found here](https://github.com/Cethric/GraphQLIntro/tree/master/hasura)
 
 
 ### Connecting to the server
-When accessing hasura for the first time in a web browser (which in this example is available at [`http://localhost:8090`](http://localhost:8090)) you will need to enter the secret key (`ChangeThisSecretKey`) to be granted admin priveledges where you can start defining the structure of the `PostgreSQL` tables, the permissions on each row and column of a table and any custom actions, triggers or remote schemas that should be joined.
+When accessing Hasura for the first time in a web browser (which in this example is available at [`http://localhost:8090`](http://localhost:8090)) you will need to enter the secret key (`ChangeThisSecretKey`) to be granted admin priveledges where you can start defining the structure of the `PostgreSQL` tables, the permissions on each row and column of a table and any custom actions, triggers or remote schemas that should be joined.
 
 # GraphQL Client
-When connecting to GraphQL using the GraphQL client there is a [common part](#apollo-graphql-client) and there may be a plugin for the front end framework being used to display content to the user. In this example it is [VueJS](#vuejs-web-application)
+When connecting to GraphQL using the GraphQL client there is a [common part](#apollo-graphql-client) and then there may be a plugin for the front end framework being used to display content to the user. In this example it is [VueJS](#vuejs-web-application)
 
-An example for this can be [found here](https://github.com/Cethric/GraphQLIntro/tree/master/apollo-client)
+An example of this can be [found here](https://github.com/Cethric/GraphQLIntro/tree/master/apollo-client)
 
 ## Apollo GraphQL Client
 
