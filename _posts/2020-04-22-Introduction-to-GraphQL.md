@@ -133,7 +133,7 @@ server.listen({
 ```
 
 ## Hasura GraphQL Engine
-The [Hasura GraphQL Engine][hasura-home-page] is an alternative batteries included approach to creating a GraphQL server compared to the Apollo GraphQL Server.
+The [Hasura GraphQL Engine][hasura-home-page] is an alternative batteries included approach to creating a GraphQL server compared to the Apollo GraphQL Server. It makes use of a PostgreSQL database for storage and a web interface / rest api to manage and interact with the server. Hasura allows for other GraphQL servers, microservices and other serverless code to be merged into a single GraphQL endpoint making it easier to manage and access from the clients machine.
 
 ### Running the server
 Hasura can be launched using the following docker compose script
@@ -156,7 +156,7 @@ services:
           nocopy: true
 
   hasura:
-    image: hasura/graphql-engine:v1.2.0-beta.3.cli-migrations-v2
+    image: hasura/graphql-engine:v1.2.0-beta.4
     restart: always
     depends_on:
       - postgres
@@ -168,16 +168,6 @@ services:
       HASURA_GRAPHQL_ENABLED_LOG_TYPES: startup, http-log, webhook-log, websocket-log, query-log
       HASURA_GRAPHQL_ADMIN_SECRET: "ChangeThisSecretKey"
       HASURA_GRAPHQL_UNAUTHORIZED_ROLE: "public"
-    volumes:
-      - type: bind
-        source: ./metadata
-        target: /hasura-metadata
-        read_only: true
-
-      - type: bind
-        source: ./migrations
-        target: /hasura-migrations
-        read_only: true
 
 volumes:
   database:
