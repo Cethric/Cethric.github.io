@@ -1,4 +1,5 @@
 ---
+layout: post
 excerpt_separator: <!-- content -->
 time: '2020-04-22 09:05 +1000'
 author: Blake Rogan
@@ -52,6 +53,23 @@ Something to note however is that types are only outputs to be able to bundle ar
 
 #### Example
 An example schema is defined bellow for a simple book database where a user can query for all books or for a specific book by title. They are also able to insert a new book into the database:
+```graphql
+type Book {
+	title: String
+	author: String
+}
+
+type Query {
+	books: [Book]!
+
+	book(title:String!): Book
+}
+
+type Mutation {
+	insert_book(title:String! author:String!): Boolean!
+}
+
+```
 
 For more information about how to create GraphQL schemas [look here](https://graphql.org/learn/schema)
 
@@ -59,12 +77,99 @@ For more information about how to create GraphQL schemas [look here](https://gra
 Resolvers can be declared in the following way
 
 
+```typescript
+const resolvers: Resolvers = {
+    Query: {
+        books: (source, args, context) => {
+            return context.data.books();
+        },
+        book: (source, {title}, context) => {
+            return context.data.book(title);
+        },
+    },
+    Mutation: {
+        insert_book: (source, {title, author}, context) => {
+            return context.data.insertBook(title, author);
+        }
+    },
+}
+
+```
+
+
 ### The Server
 The server can be declared in the following way
+
+```typescript
+const server = new ApolloServer({
+    typeDefs,
+    resolvers,
+    context: (async (context) => ({
+        data: new MockDatabase(),
+        ...context,
+    })) as DatabaseResolverContextFunction
+});
+
+server.listen({
+    port: 4000,
+}).then(({url}) => {
+    console.log(`🚀  Server ready at ${url}`);
+}).catch((reason) => {
+    console.error('Failed to launch server');
+    console.error(reason);
+});
+
+```
 
 ## Hasura GraphQL Engine
 
 Hasura can be launched using the following docker compose script
+```yaml
+version: "3.7"
+
+services:
+  postgres:
+    image: postgres:12
+    ports:
+      - "5432:5432"
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: databasePassword
+    volumes:
+      - type: volume
+        source: database
+        target: /var/lib/postgresql/data
+        volume:
+          nocopy: true
+
+  hasura:
+    image: hasura/graphql-engine:v1.2.0-beta.3.cli-migrations-v2
+    restart: always
+    depends_on:
+      - postgres
+    ports:
+      - "8090:8080"
+    environment:
+      HASURA_GRAPHQL_DATABASE_URL: postgres://postgres:databasePassword@postgres:5432/postgres
+      HASURA_GRAPHQL_ENABLE_CONSOLE: "false"
+      HASURA_GRAPHQL_ENABLED_LOG_TYPES: startup, http-log, webhook-log, websocket-log, query-log
+      HASURA_GRAPHQL_ADMIN_SECRET: "hasuraSecret"
+      HASURA_GRAPHQL_UNAUTHORIZED_ROLE: "public"
+    volumes:
+      - type: bind
+        source: ./metadata
+        target: /hasura-metadata
+        read_only: true
+
+      - type: bind
+        source: ./migrations
+        target: /hasura-migrations
+        read_only: true
+
+volumes:
+  database:
+    name: "GraphQLIntroPostgreSQL"
+```
 
 The two volumes that are bound to the hasura container (ln 32 &amp; ln 37) are for the hasura metadata and migrations API which can be used to automate the process of creating the container and the PostgreSQL database
 
@@ -77,18 +182,71 @@ An example for this can be [found here](https://github.com/Cethric/GraphQLIntro/
 
 ## Apollo GraphQL Client
 
+```typescript
+const httpLink = createHttpLink({
+    // You should use an absolute URL here
+    uri: 'http://localhost:8090/v1/graphql',
+});
+
+// Cache implementation
+const cache = new InMemoryCache();
+
+// Create the apollo client
+const apolloClient = new ApolloClient({
+    link: httpLink,
+    cache,
+});
+```
 
 ## VueJS Web Application
 
 
+```typescript
+const apolloProvider = new VueApollo({
+    defaultClient: apolloClient,
+});
+
+export {
+    apolloClient,
+    apolloProvider,
+};
+```
 
 To then use the GraphQL provider the following can be done.
 
 For a mutation:
-
+```typescript
+const result = await this.$apollo.mutate<MutationResult, MutationVariables>({
+  mutation: gql`mutation($author:String! $title: String!) {
+    insert_book(object: {author: $author title: $title}) {
+      author
+      title
+    }
+  }`,
+  variables: {
+    title: this.title,
+    author: this.author,
+  }
+});
+```
 
 For a query
-
+```typescript
+@Component({
+  apollo: {
+    book: {
+      query: gql`query($title:String!) {book(title:$title){title author}}`,
+      variables() {
+        return {
+          title: this.$route.params.title,
+        }
+      }
+    },
+  }
+})
+export default class Details extends Vue {
+}
+```
 
 # Links
 [GraphQL](https://graphql.org/)
