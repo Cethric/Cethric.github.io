@@ -4,7 +4,7 @@ excerpt_separator: <!-- content -->
 time: '2020-04-22 09:05 +1000'
 author: Blake Rogan
 toc: true
-published: false
+published: true
 title: Introduction to GraphQL
 category:
   - Blogging
@@ -16,6 +16,12 @@ tags:
   - tutorial
   - web-api
 ---
+
+What is GraphQL and how do I use it?
+
+An incomplete introduction to GraphQL
+
+<!-- content -->
 
 In this blog post I will cover some basic techniques to create a GraphQL server using the Apollo Server Library and the Hasura GraphQL engine. I will then go on to provide an example of to connect a client application to the GraphQL server.
 I should also note that this tutorial does not cover all of the features of GraphQL but only a few of them
@@ -51,6 +57,7 @@ type Book {
     title: String
     author: String
 }
+
 ```
 
 Something to note however is that types are only outputs to be able to bundle arguments together the [`input`][input-types] type needs to be used
@@ -72,6 +79,7 @@ type Query {
 type Mutation {
 	insert_book(title:String! author:String!): Boolean!
 }
+
 ```
 
 For more information about how to create GraphQL schemas [look here](https://graphql.org/learn/schema)
@@ -96,6 +104,7 @@ const resolvers: Resolvers = {
         }
     },
 }
+
 ```
 
 
@@ -120,6 +129,7 @@ server.listen({
     console.error('Failed to launch server');
     console.error(reason);
 });
+
 ```
 
 ## Hasura GraphQL Engine
