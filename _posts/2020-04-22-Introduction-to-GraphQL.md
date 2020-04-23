@@ -15,6 +15,10 @@ tags:
   - apollo
   - tutorial
   - web-api
+  - vuejs
+  - frontend
+  - backend
+  - typescript
 ---
 
 What is GraphQL and how do I use it?
