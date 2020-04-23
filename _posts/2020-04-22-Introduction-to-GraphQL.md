@@ -19,7 +19,6 @@ tags:
   - frontend
   - backend
   - typescript
-image: 'https://picsum.photos/200/300'
 ---
 
 What is GraphQL and how do I use it?
