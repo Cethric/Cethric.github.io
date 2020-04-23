@@ -27,6 +27,8 @@ An incomplete introduction to GraphQL.
 
 <!-- content -->
 
+---
+
 In this blog post, I will cover some basic techniques to create a GraphQL server using the Apollo Server Library and the Hasura GraphQL engine. I will then go on to provide an example of how to connect a client application to the GraphQL server.
 I should also note that this tutorial does not cover all of the features of GraphQL but only a few of them
 
