@@ -58,7 +58,7 @@ _dump() {
   {
     echo "- filename: $1"
     echo "  lastmod: $_lastmod"
-  } >> _filename
+  } >> "$_filename"
 }
 
 main() {

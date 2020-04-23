@@ -6,7 +6,7 @@ author: Blake Rogan
 toc: true
 published: true
 title: Introduction to GraphQL
-category:
+categories:
   - Blogging
   - Tutorial
 tags:

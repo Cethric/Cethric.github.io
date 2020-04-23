@@ -20,7 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a3865317-0f03-454e-9364-98d7d5f5a29f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/_layouts/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/_layouts/home.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/categories/blogging.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/categories/tutorial.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2020-04-22-Introduction-to-GraphQL.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2020-04-22-Introduction-to-GraphQL.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_scripts/sh/create_pages.sh" beforeDir="false" afterPath="$PROJECT_DIR$/_scripts/sh/create_pages.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_scripts/sh/dump_lastmod.sh" beforeDir="false" afterPath="$PROJECT_DIR$/_scripts/sh/dump_lastmod.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

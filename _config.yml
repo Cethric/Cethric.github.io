@@ -215,7 +215,7 @@ prose:
           label: "Tags"
           placeholder: "Tags"
           alterable: true
-      - name: "category"
+      - name: "categories"
         field:
           element: "multiselect"
           label: "Categories"
@@ -262,7 +262,7 @@ prose:
           label: "Tags"
           placeholder: "Tags"
           alterable: true
-      - name: "category"
+      - name: "categories"
         field:
           element: "multiselect"
           label: "Categories"

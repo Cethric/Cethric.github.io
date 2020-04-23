@@ -87,32 +87,34 @@ create_tag() {
 
 main() {
   init
-
   local _posts
+  local _path
+  local _front_matter
+  local _categories
+  local _tags
+
   _posts=$(ls "_posts")
 
   for _file in $_posts; do
-    local _path="_posts/$_file"
+    _path="_posts/$_file"
 
     echo -e "Updating Posts: $_path\n"
 
     perl _scripts/pl/parse_front_matter.pl "$_path"
 
-    local _front_matter
     _front_matter=$(parse_front_matter "$_path")
 
-    local _categories
+    echo "$_front_matter"
+
     _categories=$(read_categories "$_front_matter")
-    local _tags
-    _tags=$(read_tags "$_front_matter")
 
     for i in ${_categories#,}; do
-      echo "Category: $i"
       create_category "$i"
     done
 
+    _tags=$(read_tags "$_front_matter")
+
     for i in ${_tags#,}; do
-      echo "Tag: $i"
       create_tag "$i"
     done
   done
