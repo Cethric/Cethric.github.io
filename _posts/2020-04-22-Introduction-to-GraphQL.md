@@ -262,15 +262,17 @@ export default class Details extends Vue {
 ```
 
 # Links
-[GraphQL](https://graphql.org/)
+[GraphQL][graphql-home-page]
 
-[Apollo GraphQL][hasura-home-page]
+[Apollo GraphQL][apollo-home-page]
 
-[Hasura GraphQL Engine](https://hasura.io/)
+[Hasura GraphQL Engine][hasura-home-page]
 
 [Example Project](https://github.com/Cethric/GraphQLIntro)
 
-[hasura-home-page]: https://www.apollographql.com/
+[graphql-home-page]: https://graphql.org/
+[hasura-home-page]: https://hasura.io/
+[apollo-home-page]: https://www.apollographql.com/
 [apollo-example]: https://github.com/Cethric/GraphQLIntro/tree/master/apollo
 [the-query-and-mutation-types]: https://graphql.org/learn/schema/#the-query-and-mutation-types
 [object-types-and-fields]: https://graphql.org/learn/schema/#object-types-and-fields
