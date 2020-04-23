@@ -16,6 +16,7 @@ tags:
   - tutorial
   - web-api
 ---
+
 What is GraphQL and how do I use it?
 
 An incomplete introduction to GraphQL.
@@ -187,6 +188,8 @@ When connecting to GraphQL using the GraphQL client there is a [common part](#ap
 An example of this can be [found here](https://github.com/Cethric/GraphQLIntro/tree/master/apollo-client)
 
 ## Apollo GraphQL Client
+In this example, a GraphQL client will be constructed without using the Apollo Boost library so that additional configuration options, custom caching and more detailed links can be created. For more information about setting up custom Apollo GraphQL clients [click here][apollo-client]
+
 
 ```typescript
 const httpLink = createHttpLink({
@@ -205,7 +208,7 @@ const apolloClient = new ApolloClient({
 ```
 
 ## VueJS Web Application
-
+Once the client has been constructed it can be attached to the frontend library of choice. The Apollo Client library has built-in support for ReactJS and multiple third-party integrations to connect to other popular frameworks. In this example, we will be using the [Vue Apollo][vue-apollo] library by Guillaume CHAU @Akryum. This library attaches the GraphQL client to the VueJS instance and allows for the use of `Components` as well as custom component options. It also exposes the `$apollo` object to the `Components` which is a reference to the Apollo Client object
 
 ```typescript
 const apolloProvider = new VueApollo({
@@ -270,3 +273,5 @@ export default class Details extends Vue {
 [scalar-types]: https://graphql.org/learn/schema/#scalar-types
 [input-types]: https://graphql.org/learn/schema/#input-types
 [graphiql-link]: https://github.com/graphql/graphiql
+[apollo-client]: https://www.apollographql.com/docs/react/migrating/boost-migration/
+[vue-apollo]: https://apollo.vuejs.org/
