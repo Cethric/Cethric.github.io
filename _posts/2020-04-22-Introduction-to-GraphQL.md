@@ -77,7 +77,7 @@ type Mutation {
 
 ```
 
-For more information about how to create GraphQL schemas [visit the GraphQL website here](https://graphql.org/learn/schema)
+For more information about how to create GraphQL schemas [visit the GraphQL website here][graphql-schema]
 
 ### The Resolvers
 Resolvers are used to connect the GraphQL schema to an action in the server. 
@@ -180,7 +180,7 @@ volumes:
 
 The two volumes that are bound to the Hasura container (ln 32 &amp; ln 37) are for the Hasura metadata and migrations API which can be used to automate the process of creating the container and the PostgreSQL database
 
-An example of this can be [found here](https://github.com/Cethric/GraphQLIntro/tree/master/hasura)
+An example of this can be [found here][hasura-example]
 
 
 ### Connecting to the server
@@ -189,7 +189,7 @@ When accessing Hasura for the first time in a web browser (which in this example
 # GraphQL Client
 When connecting to GraphQL using the GraphQL client there is a [common part](#apollo-graphql-client) and then there may be a plugin for the front end framework being used to display content to the user. In this example it is [VueJS](#vuejs-web-application)
 
-An example of this can be [found here](https://github.com/Cethric/GraphQLIntro/tree/master/apollo-client)
+An example of this can be [found here][apollo-client-example]
 
 ## Apollo GraphQL Client
 In this example, a GraphQL client will be constructed without using the Apollo Boost library so that additional configuration options, custom caching and more detailed links can be created. For more information about setting up custom Apollo GraphQL clients [click here][apollo-client]
@@ -268,16 +268,24 @@ export default class Details extends Vue {
 
 [Hasura GraphQL Engine][hasura-home-page]
 
-[Example Project](https://github.com/Cethric/GraphQLIntro)
+[Example Project][example-project-root]
 
 [graphql-home-page]: https://graphql.org/
-[hasura-home-page]: https://hasura.io/
-[apollo-home-page]: https://www.apollographql.com/
-[apollo-example]: https://github.com/Cethric/GraphQLIntro/tree/master/apollo
-[the-query-and-mutation-types]: https://graphql.org/learn/schema/#the-query-and-mutation-types
-[object-types-and-fields]: https://graphql.org/learn/schema/#object-types-and-fields
-[scalar-types]: https://graphql.org/learn/schema/#scalar-types
+[graphql-schema]: https://graphql.org/learn/schema
 [input-types]: https://graphql.org/learn/schema/#input-types
-[graphiql-link]: https://github.com/graphql/graphiql
-[apollo-client]: https://www.apollographql.com/docs/react/migrating/boost-migration/
+[scalar-types]: https://graphql.org/learn/schema/#scalar-types
+[object-types-and-fields]: https://graphql.org/learn/schema/#object-types-and-fields
+[the-query-and-mutation-types]: https://graphql.org/learn/schema/#the-query-and-mutation-types
+
 [vue-apollo]: https://apollo.vuejs.org/
+[graphiql-link]: https://github.com/graphql/graphiql
+
+[hasura-home-page]: https://hasura.io/
+
+[example-project-root]: https://github.com/Cethric/GraphQLIntro
+[apollo-example]: https://github.com/Cethric/GraphQLIntro/tree/master/apollo
+[hasura-example]: https://github.com/Cethric/GraphQLIntro/tree/master/hasura
+[apollo-client-example]: https://github.com/Cethric/GraphQLIntro/tree/master/apollo-client
+
+[apollo-home-page]: https://www.apollographql.com/
+[apollo-client]: https://www.apollographql.com/docs/react/migrating/boost-migration/
