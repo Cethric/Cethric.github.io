@@ -19,3 +19,7 @@ categories:
 So the new version of Yarn broke you project. It was broken anyway, Yarn just made you fix it.
 
 <!-- content -->
+
+--
+
+Yarn 2 is the *new and improved* version of the popular package manager Yarn
