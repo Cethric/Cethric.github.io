@@ -28,4 +28,4 @@ Yarn 2 is the *new and improved* version of the popular package manager Yarn whi
 
 
 
-[pnp_runtime](https://yarnpkg.com/features/pnp)
+[pnp_runtime]: https://yarnpkg.com/features/pnp
