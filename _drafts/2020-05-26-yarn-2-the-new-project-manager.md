@@ -22,4 +22,10 @@ So the new version of Yarn broke you project. It was broken anyway, Yarn just ma
 
 --
 
-Yarn 2 is the *new and improved* version of the popular package manager Yarn
+Yarn 2 is the *new and improved* version of the popular package manager Yarn which is an alternative to the default **N**ode **P**ackage **M**anager that comes with NodeJS. In this article I will talk about some of the things that it breaks and ways to work around the issues until package maintainers update their projects to support the [plug and play runtime](pnp_runtime)
+
+
+
+
+
+[pnp_runtime]: https://yarnpkg.com/features/pnp
