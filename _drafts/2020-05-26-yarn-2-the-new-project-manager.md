@@ -37,7 +37,7 @@ However, all these great things come with a problem, and it's not an issue that 
 For example, package `A` depends on package `B` and uses parts of package `C` and package `B` depends on package `C`. In the previous `node_modules` module resolution process this would work fine as package `C` is already in `node_modules` so even though package `A` does not depend on package `C` it is still able to use it. However, in the new PnP runtime, this would throw an issue `A package is trying to access another package without the second one being listed as a dependency of the first one.`
 
 ## The Solution
-As per the Yarn 2 [migration guide][migration_guide], the long term recommended solution is to provide a PR to the upstream package to add the missing dependencies to the package listings. However this can take time to be processed and filter into npm modules, so a short term solution is available that involves modifying the `.yarnrc.yml` file to make yarn aware of the missing dependencies. This can be acheived by adding entries to the [`packageExtensions`][package-extensions] key in the `.yarnrc.yml` file.
+As per the Yarn 2 [migration guide][migration_guide], the long term recommended solution is to provide a PR to the upstream package to add the missing dependencies to the package listings. However this can take time to be processed and filter into npm modules, so a short term solution is available that involves modifying the `.yarnrc.yml` file to make yarn aware of the missing dependencies. This can be achieved by adding entries to the [`packageExtensions`][package-extensions] key in the `.yarnrc.yml` file.
 
 ```yaml
 packageExtensions:
@@ -46,6 +46,12 @@ packageExtensions:
       lodash: "^4.15.0"
     peerDependencies:
       webpack-cli: "*"
+```
+
+In some situations, adding dependencies to the `packageExtensions` key may not be enough, or they might be too many to be practically possible to manager. As a result, the node linker mode can also be changed to revert back to the older `node_modules` format. This can be achieved by modifying the `nodeLinker` key in the `.yarnrc.yml` file
+```yarml
+# This can either be "pnp" or "node-modules"
+nodeLinker: "node-modules"
 ```
 
 [pnp_runtime]: https://yarnpkg.com/features/pnp
