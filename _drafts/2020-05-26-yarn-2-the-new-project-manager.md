@@ -41,11 +41,11 @@ As per the Yarn 2 [migration guide][migration_guide], the long term recommended 
 
 ```yaml
 packageExtensions:
-	webpack@*:
-		dependencies:
-			lodash: "^4.15.0"
-		peerDependencies:
-			webpack-cli: "*"
+  webpack@*:
+    dependencies:
+      lodash: "^4.15.0"
+    peerDependencies:
+      webpack-cli: "*"
 ```
 
 [pnp_runtime]: https://yarnpkg.com/features/pnp
