@@ -49,7 +49,7 @@ packageExtensions:
 ```
 
 In some situations, adding dependencies to the `packageExtensions` key may not be enough, or they might be too many to be practically possible to manager. As a result, the node linker mode can also be changed to revert back to the older `node_modules` format. This can be achieved by modifying the `nodeLinker` key in the `.yarnrc.yml` file
-```yarml
+```yaml
 # This can either be "pnp" or "node-modules"
 nodeLinker: "node-modules"
 ```
