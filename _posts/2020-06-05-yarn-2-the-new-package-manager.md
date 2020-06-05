@@ -10,7 +10,7 @@ tags:
   - Yarn 2
   - PNP
   - NodeJS
-  - Tutorial
+  - tutorial
   - Project Structure
 categories:
   - Blogging
