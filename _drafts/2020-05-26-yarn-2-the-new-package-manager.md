@@ -55,7 +55,7 @@ nodeLinker: "node-modules"
 ```
 
 # So should I use it in my next project?
-The short answer not yet, unfortuanatly not enough projects have been updated to support the new PnP runtime which means that most of your time will be spent trying to resolve missing dependancies in the `packageExtensions` before you can start developing. However that does not mean that yarn 2 should not be used at all. Other features that may be discussed in future posts can still be used with the PnP runtime disabled, improved project management with workspaces, and reduced install times and project sizes compared to npm. Yarn2 is also being regularly updated and package maintains are updating their projects to [support the PnP runtime][compat_table].
+The short answer not yet, unfortuanatly not enough projects have been updated to support the new PnP runtime which means that most of your time will be spent trying to resolve missing dependancies in the `packageExtensions` before you can start developing. However that does not mean that yarn 2 should not be used at all. Other features that may be discussed in future posts can still be used with the PnP runtime disabled, improved project management with workspaces, and reduced install times and project sizes compared to npm. Yarn2 is also being regularly updated and package maintainers' are updating their projects to [support the PnP runtime][compat_table].
 
 [pnp_runtime]: https://yarnpkg.com/features/pnp
 [node_resolution_algorithm]: https://nodejs.org/api/modules.html#modules_all_together
