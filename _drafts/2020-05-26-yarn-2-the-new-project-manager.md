@@ -5,7 +5,7 @@ time: '2020-05-26 15:36 +1000'
 author: Blake Rogan
 toc: true
 published: true
-title: Yarn 2 the new Project Manager
+title: Yarn 2 the new Package Manager
 tags:
   - Yarn 2
   - PNP
