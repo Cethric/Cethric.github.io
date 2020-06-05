@@ -48,13 +48,17 @@ packageExtensions:
       webpack-cli: "*"
 ```
 
-In some situations, adding dependencies to the `packageExtensions` key may not be enough, or they might be too many to be practically possible to manager. As a result, the node linker mode can also be changed to revert back to the older `node_modules` format. This can be achieved by modifying the `nodeLinker` key in the `.yarnrc.yml` file
+In some situations, adding dependencies to the `packageExtensions` key may not be enough, or there might be too many to be practically possible to manage. As a result, the node linker mode can also be changed to revert back to the older `node_modules` format. This can be achieved by modifying the `nodeLinker` key in the `.yarnrc.yml` file
 ```yaml
 # This can either be "pnp" or "node-modules"
 nodeLinker: "node-modules"
 ```
 
+# So should I use it in my next project?
+The short answer not yet, unfortuanatly not enough projects have been updated to support the new PnP runtime which means that most of your time will be spent trying to resolve missing dependancies in the `packageExtensions` before you can start developing. However that does not mean that yarn 2 should not be used at all. Other features that may be discussed in future posts can still be used with the PnP runtime disabled, improved project management with workspaces, and reduced install times and project sizes compared to npm. Yarn2 is also being regularly updated and package maintains are updating their projects to [support the PnP runtime][compat_table].
+
 [pnp_runtime]: https://yarnpkg.com/features/pnp
 [node_resolution_algorithm]: https://nodejs.org/api/modules.html#modules_all_together
 [migration_guide]: https://yarnpkg.com/advanced/migration
 [package-extensions]: https://yarnpkg.com/configuration/yarnrc#packageExtensions
+[compat_table]: https://yarnpkg.com/features/pnp#compatibility-table
